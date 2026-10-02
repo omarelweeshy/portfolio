@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Omar Ashraf / Portfolio
 
-## Getting Started
+An editorial portfolio built with Next.js, React, and TypeScript. Warm ivory, cobalt accents, responsive project compositions, and a CSS wireframe animation.
 
-First, run the development server:
+## Local preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```powershell
+npm ci
+npm run dev -- --hostname 127.0.0.1 --port 3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://127.0.0.1:3000. Changes reload automatically.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```powershell
+npm run lint
+npm run build
+```
 
-## Learn More
+## Editing
 
-To learn more about Next.js, take a look at the following resources:
+- `src/components/Portfolio.tsx`: page composition and selected projects.
+- `src/lib/data.ts`: contact information, skills, and experience.
+- `src/app/globals.css`: visual design and responsive layouts.
+- `src/app/layout.tsx`: search metadata and root layout.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The older section components remain in the repository but are not rendered by the redesigned page. Project artwork is illustrative CSS, not application screenshots. Project links open the corresponding GitHub repositories. Contact links open the visitor's email client.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The page respects reduced-motion preferences and provides a motion pause control, keyboard focus styles, a skip link, and a mobile navigation menu. Fonts use the system stack and require no external requests.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Local edits do not update Vercel until they are committed and pushed through the connected deployment workflow.
