@@ -286,9 +286,9 @@ export default function Portfolio() {
                 Bank brings that thinking into the NGO world.
               </p>
               <p>
-                Currently expanding my practice into cybersecurity and threat
-                intelligence. Always interested in the next problem worth
-                solving.
+                I keep expanding my practice through applied AI, automation,
+                and digital products. Always interested in the next problem
+                worth solving.
               </p>
               <a
                 className="text-link"
