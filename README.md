@@ -1,15 +1,30 @@
 # Omar Ashraf / Portfolio
 
-An editorial portfolio built with Next.js, React, and TypeScript. Warm ivory, cobalt accents, responsive project compositions, and a CSS wireframe animation.
+Live: https://omarelweeshy.vercel.app
+
+A single-page, motion-led portfolio built with Next.js 16, React 19, GSAP (ScrollTrigger, SplitText) and Lenis.
+
+## What is on the page
+
+- Preloader with counter and curtain reveal, then a split-character hero intro.
+- WebGL hero: a domain-warped noise field drawn as contour lines that glow around the pointer (raw WebGL, no 3D library). It pauses offscreen and falls back to a CSS gradient without WebGL.
+- Scroll-scrubbed intro statement, a pinned horizontal project gallery on desktop (vertical on mobile), a velocity-reactive marquee, a page-wide light theme for the services section, and a footer revealed from under the page.
+- Custom cursor with contextual labels, magnetic buttons and text-roll hovers on fine pointers only.
+
+## Accessibility and performance
+
+- `prefers-reduced-motion` disables the preloader, smooth scrolling, pinning and scrubbed animations, and renders the shader as a still frame.
+- Skip link, visible focus styles, keyboard-reachable service rows and an Escape-closable mobile menu.
+- Fonts are self-hosted through `next/font`. The page is statically prerendered.
 
 ## Local preview
 
 ```powershell
 npm ci
-npm run dev -- --hostname 127.0.0.1 --port 3000
+npm run dev
 ```
 
-Open http://127.0.0.1:3000. Changes reload automatically.
+Open http://localhost:3000.
 
 ## Validation
 
@@ -20,13 +35,13 @@ npm run build
 
 ## Editing
 
-- `src/components/Portfolio.tsx`: page composition and selected projects.
-- `src/lib/data.ts`: contact information, skills, and experience.
-- `src/app/globals.css`: visual design and responsive layouts.
-- `src/app/layout.tsx`: search metadata and root layout.
+- `src/lib/content.ts`: all copy, projects, services, experience and links.
+- `public/work/`: project screenshots (captured from the live public demos).
+- `src/app/globals.css`: design tokens and layout.
+- `src/components/`: one file per section; shared GSAP setup in `src/lib/motion.ts`.
 
-The older section components remain in the repository but are not rendered by the redesigned page. Project artwork is illustrative CSS, not application screenshots. Project links open the corresponding GitHub repositories. Contact links open the visitor's email client.
+Project cards for DocIntel, Donation Forecast and the dermatology research are labelled illustrations, not screenshots. Live demo links go to the projects' public Vercel demos, which use fictional or recorded data.
 
-The page respects reduced-motion preferences and provides a motion pause control, keyboard focus styles, a skip link, and a mobile navigation menu. Fonts use the system stack and require no external requests.
+## Deployment
 
-Local edits do not update Vercel until they are committed and pushed through the connected deployment workflow.
+Vercel deploys automatically from `main` on GitHub.
