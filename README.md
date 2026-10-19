@@ -40,7 +40,7 @@ npm run build
 - `src/app/globals.css`: design tokens and layout.
 - `src/components/`: one file per section; shared GSAP setup in `src/lib/motion.ts`.
 
-Project cards for DocIntel, Donation Forecast and the dermatology research are labelled illustrations, not screenshots. Live demo links go to the projects' public Vercel demos, which use fictional or recorded data.
+Project cards for Donation Forecast and the dermatology research are labelled illustrations, not screenshots. Live demo links go to the projects' public Vercel demos, which use fictional or recorded data.
 
 ## Deployment
 

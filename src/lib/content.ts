@@ -64,10 +64,12 @@ export const projects: Project[] = [
     year: "2026",
     category: "Document intelligence / RAG",
     summary:
-      "Self-hosted retrieval over PDFs, DOCX and text. Answers cite the exact passage and page, run on local models, and are validated against what was actually retrieved.",
+      "Self-hosted retrieval over PDFs, DOCX and text. Answers cite the exact passage and page, run on local models, and abstain when the evidence is not there. The public demo runs retrieval in your browser.",
     stack: ["Python", "FastAPI", "pgvector", "Ollama", "Next.js"],
-    status: "Self-hosted, source on GitHub",
-    visual: "documents",
+    status: "Live demo, sample documents",
+    visual: "image",
+    image: "/work/docintel.jpg",
+    demo: "https://docintel-ai-psi.vercel.app",
     repo: "https://github.com/omarelweeshy/docintel-ai",
   },
   {
