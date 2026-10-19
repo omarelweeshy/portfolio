@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free quote form concept – Quality Decorating Ltd, Whanganui (concept demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Quality Decorating Ltd website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#before-after">Skip to the quote form</a>
+
+  <header class="site-header">
+    <div class="demo-banner" role="note">
+      <strong>Concept demo by Omar, not the official Quality Decorating Ltd website</strong>
+    </div>
+    <div class="wrap header-inner">
+      <p class="brand">
+        <span class="brand-mark" aria-hidden="true">QD</span>
+        <span>
+          <span class="brand-name">Quality Decorating Ltd</span>
+          <span class="brand-tag">Painting &amp; decorating in Whanganui</span>
+        </span>
+      </p>
+      <nav aria-label="Demo sections">
+        <ul class="nav-list">
+          <li><a href="#before-after">Contact Us</a></li>
+          <li><a href="#owner-view">Owner view</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro wrap" aria-labelledby="intro-heading">
+      <h1 id="intro-heading">Turn “Flick us a message!” into free-quote enquiries</h1>
+      <p>
+        Today the Contact Us page asks visitors to flick Quality Decorating Ltd a message,
+        but there is no form underneath. Below is the same section as it looks now, next to
+        a mock-up with a short quote form that works on any phone.
+      </p>
+    </section>
+
+    <section id="before-after" class="wrap before-after" aria-labelledby="ba-heading">
+      <h2 id="ba-heading" class="visually-hidden">Contact Us page: before and after</h2>
+
+      <article class="panel panel-before" aria-labelledby="before-heading">
+        <p class="panel-label panel-label-before">Before – today’s page (recreated)</p>
+        <h3 id="before-heading" class="page-heading">Contact Us</h3>
+        <div class="before-mock">
+          <p class="before-title">Flick us a message!</p>
+          <div class="before-empty" aria-label="Empty area where a form should be">
+            <span>(nothing here – no form to fill in)</span>
+          </div>
+          <p class="before-note">
+            Visitors who want a free quote have no way to send their details online, so
+            some of them simply move on to the next painter.
+          </p>
+        </div>
+      </article>
+
+      <article class="panel panel-after" aria-labelledby="after-heading">
+        <p class="panel-label panel-label-after">After – with a working quote form</p>
+        <h3 id="after-heading" class="page-heading">Flick us a message!</h3>
+        <p class="lead">Tell us about your job and we’ll get back to you with a free quote.</p>
+
+        <form id="enquiry-form" novalidate>
+          <p class="form-hint">All fields are required unless marked optional.</p>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field radio-group" aria-describedby="preferredContact-error">
+            <legend>How should we contact you?</legend>
+            <div class="radio-row">
+              <label class="radio"><input type="radio" name="preferredContact" value="phone" checked> Phone call</label>
+              <label class="radio"><input type="radio" name="preferredContact" value="text"> Text</label>
+              <label class="radio"><input type="radio" name="preferredContact" value="email"> Email</label>
+            </div>
+            <p id="preferredContact-error" class="error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="field-pair">
+            <div class="field">
+              <label for="phone">Phone <span class="opt" id="phone-req">(needed for call or text)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" aria-describedby="phone-error">
+              <p id="phone-error" class="error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="opt" id="email-req">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="email-error">
+              <p id="email-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field-pair">
+            <div class="field">
+              <label for="suburb">Suburb or address</label>
+              <input id="suburb" name="suburb" type="text" autocomplete="street-address" maxlength="100" aria-describedby="suburb-hint suburb-error">
+              <p id="suburb-hint" class="hint">e.g. Gonville, or 12 Sample Street</p>
+              <p id="suburb-error" class="error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="jobType">Type of job</label>
+              <select id="jobType" name="jobType" aria-describedby="jobType-error">
+                <option value="">Choose a job type…</option>
+                <option value="interior-painting">Interior painting</option>
+                <option value="exterior-painting">Exterior painting</option>
+                <option value="roof-painting">Roof painting</option>
+                <option value="wallpapering">Wallpapering</option>
+                <option value="commercial">Commercial painting</option>
+                <option value="other">Something else</option>
+              </select>
+              <p id="jobType-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="description">Tell us about the job</label>
+            <textarea id="description" name="description" rows="4" maxlength="1000" aria-describedby="description-hint description-error"></textarea>
+            <p id="description-hint" class="hint">Rooms or areas, rough size, and when you’d like it done.</p>
+            <p id="description-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="photo">Add a photo <span class="opt">(optional)</span></label>
+            <input id="photo" name="photo" type="file" accept="image/*" aria-describedby="photo-hint photoName-error">
+            <p id="photo-hint" class="hint">In this demo only the file name is kept; the photo is not uploaded.</p>
+            <p id="photoName-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send my quote request</button>
+        </form>
+
+        <div id="confirmation" class="confirmation" tabindex="-1" hidden>
+          <h4 class="confirm-title">Thanks <span id="confirm-name"></span>, your request is in!</h4>
+          <p>Your reference is <strong id="confirm-ref"></strong>.</p>
+          <p>We’ll be in touch by <span id="confirm-method"></span> to talk about your free quote.</p>
+          <button type="button" id="new-enquiry" class="btn btn-secondary">Send another enquiry</button>
+        </div>
+
+        <aside class="real-version" aria-label="How the real version works">
+          <h4>What happens in the real version</h4>
+          <p>
+            Each enquiry is added as a new row in a Google Sheet and emailed straight to Ian,
+            so no quote request gets lost. In this demo the enquiry is only saved in your
+            browser so you can see it in the Owner view below.
+          </p>
+        </aside>
+      </article>
+    </section>
+
+    <section id="owner-view" class="wrap owner-view" aria-labelledby="owner-heading">
+      <div class="owner-head">
+        <div>
+          <h2 id="owner-heading">Owner view</h2>
+          <p class="owner-sub">Enquiries saved in this browser, newest first. Update the status as jobs progress.</p>
+        </div>
+        <div class="owner-actions">
+          <button type="button" id="export-csv" class="btn btn-secondary">Export CSV</button>
+          <button type="button" id="clear-data" class="btn btn-ghost">Clear demo data</button>
+        </div>
+      </div>
+      <p id="owner-status" class="owner-status" role="status" aria-live="polite"></p>
+      <p id="empty-state" class="empty-state">No enquiries yet. Fill in the quote form above to see one appear here.</p>
+      <ul id="enquiry-list" class="enquiry-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official Quality Decorating Ltd website</strong></p>
+      <p>
+        Quality Decorating Ltd · Whanganui, New Zealand.
+        Phone: 06 000 0000 <em>(sample placeholder)</em> ·
+        Email: hello@example.co.nz <em>(sample placeholder)</em>
+      </p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
