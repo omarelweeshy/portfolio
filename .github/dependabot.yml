@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      # Next.js, React and their types move together.
+      framework:
+        patterns: ["next", "eslint-config-next", "react", "react-dom", "@types/react", "@types/react-dom"]
+      motion:
+        patterns: ["gsap", "@gsap/*", "lenis"]
+      dev-tooling:
+        dependency-type: development
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]

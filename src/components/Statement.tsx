@@ -10,7 +10,8 @@ export default function Statement() {
   useGSAP(
     () => {
       if (prefersReducedMotion()) return;
-      const split = SplitText.create(root.current!.querySelector(".statement-text"), { type: "words" });
+      // The split copy is aria-hidden; screen readers get the plain .sr-only copy instead.
+      const split = SplitText.create(root.current!.querySelector(".statement-words"), { type: "words", aria: "none" });
       gsap.fromTo(
         split.words,
         { opacity: 0.14 },
@@ -30,8 +31,11 @@ export default function Statement() {
     <section className="statement section" ref={root} aria-label="Introduction">
       <span className="label">(Intro)</span>
       <p className="statement-text">
+        <span className="sr-only">{statement}</span>
         <span className="statement-indent" aria-hidden="true" />
-        {statement}
+        <span className="statement-words" aria-hidden="true">
+          {statement}
+        </span>
       </p>
     </section>
   );
