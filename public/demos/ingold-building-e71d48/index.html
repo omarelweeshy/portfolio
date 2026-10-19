@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit your plans | Ingold Building Ltd (concept demo)</title>
+  <meta name="description" content="Concept demo: a plan-upload quote request form for Ingold Building Ltd, Ashburton.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Ingold Building Ltd website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#quote">Skip to the quote form</a>
+
+  <header class="site-header">
+    <p class="demo-banner" role="note">Concept demo by Omar, not the official Ingold Building Ltd website</p>
+    <div class="container header-inner">
+      <p class="brand">
+        <span class="brand-mark" aria-hidden="true">IB</span>
+        <span class="brand-text">
+          <span class="brand-name">Ingold Building Ltd</span>
+          <span class="brand-sub">Builders in Ashburton, Mid Canterbury</span>
+        </span>
+      </p>
+      <nav aria-label="Page sections">
+        <ul class="nav-list">
+          <li><a href="#quote">Get a quote</a></li>
+          <li><a href="#owner-view">Owner view</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">New builds, renovations and extensions in Ashburton</p>
+        <h1 id="hero-title">Got plans? Submit them for an all inclusive quote.</h1>
+        <p class="lead">Upload your building plans and tell us about the job. Craig gets everything in one
+          place, so quoting doesn't get lost in email threads.</p>
+        <ol class="steps">
+          <li><span class="step-num" aria-hidden="true">1</span> Tell us about the job</li>
+          <li><span class="step-num" aria-hidden="true">2</span> Attach your plans</li>
+          <li><span class="step-num" aria-hidden="true">3</span> We come back with a quote</li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="container layout">
+      <section id="quote" class="card" aria-labelledby="quote-title">
+        <h2 id="quote-title">Submit your plans</h2>
+        <p class="muted">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required. It takes about two minutes.</p>
+
+        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+        <form id="enquiry-form" novalidate>
+          <fieldset>
+            <legend>About the job</legend>
+
+            <div class="field">
+              <label for="projectType">Project type <span class="req" aria-hidden="true">*</span></label>
+              <select id="projectType" name="projectType" required aria-describedby="projectType-error">
+                <option value="">Choose a project type</option>
+                <option value="new-build">New build</option>
+                <option value="renovation">Renovation</option>
+                <option value="extension">Extension</option>
+                <option value="deck-outdoor">Deck or outdoor area</option>
+                <option value="maintenance">Maintenance or repairs</option>
+                <option value="other">Something else</option>
+              </select>
+              <p id="projectType-error" class="error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="description">Describe the job <span class="req" aria-hidden="true">*</span></label>
+              <p id="description-hint" class="hint">Size, rooms, materials, anything special. 10 to 1000 characters.</p>
+              <textarea id="description" name="description" rows="4" maxlength="1000" required
+                aria-describedby="description-hint description-error"></textarea>
+              <p id="description-error" class="error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="address">Suburb or site address <span class="req" aria-hidden="true">*</span></label>
+              <input id="address" name="address" type="text" autocomplete="street-address" maxlength="120" required
+                placeholder="e.g. Tinwald, Ashburton" aria-describedby="address-error">
+              <p id="address-error" class="error" hidden></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="budget">Budget range <span class="req" aria-hidden="true">*</span></label>
+                <select id="budget" name="budget" required aria-describedby="budget-error">
+                  <option value="">Choose a budget</option>
+                  <option value="under-50k">Under $50k</option>
+                  <option value="50k-150k">$50k to $150k</option>
+                  <option value="150k-300k">$150k to $300k</option>
+                  <option value="300k-plus">$300k plus</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+                <p id="budget-error" class="error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="timeframe">Timeframe <span class="req" aria-hidden="true">*</span></label>
+                <select id="timeframe" name="timeframe" required aria-describedby="timeframe-error">
+                  <option value="">Choose a timeframe</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-3-months">1 to 3 months</option>
+                  <option value="3-6-months">3 to 6 months</option>
+                  <option value="6-plus-months">6 months or more</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+                <p id="timeframe-error" class="error" hidden></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="planFile">Plans or a photo (optional)</label>
+              <p id="planFile-hint" class="hint">PDF, JPG or PNG. In this demo only the file name is kept.</p>
+              <input id="planFile" name="planFile" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+                aria-describedby="planFile-hint planFile-error">
+              <p id="planFile-error" class="error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your details</legend>
+
+            <div class="field">
+              <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required
+                aria-describedby="name-error">
+              <p id="name-error" class="error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="preferredContact">Best way to reach you <span class="req" aria-hidden="true">*</span></label>
+              <select id="preferredContact" name="preferredContact" required aria-describedby="preferredContact-error">
+                <option value="">Choose one</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+              <p id="preferredContact-error" class="error" hidden></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email <span class="req" id="email-req" aria-hidden="true" hidden>*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                  aria-describedby="email-error">
+                <p id="email-error" class="error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone <span class="req" id="phone-req" aria-hidden="true" hidden>*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"
+                  aria-describedby="phone-error">
+                <p id="phone-error" class="error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-block">Send my plans for a quote</button>
+          <p class="fine-print">Demo only: nothing leaves this browser. Entries are saved in this browser's local storage.</p>
+        </form>
+
+        <section id="confirmation" class="confirmation" hidden tabindex="-1" aria-labelledby="confirmation-title">
+          <div class="tick" aria-hidden="true">&#10003;</div>
+          <h2 id="confirmation-title">Thank you, your plans are in!</h2>
+          <p id="confirmation-message">We've received your enquiry. Craig will review your plans and get back to you with an all inclusive quote.</p>
+          <dl id="confirmation-summary" class="summary"></dl>
+          <p class="muted">In the live version, this also saves the enquiry to the Google Sheet / Airtable tracker and emails Craig an alert with the plans attached.</p>
+          <div class="actions">
+            <button type="button" id="new-enquiry" class="btn btn-secondary">Submit another enquiry</button>
+            <a class="btn btn-ghost" href="#owner-view">See it in the owner view</a>
+          </div>
+        </section>
+      </section>
+
+      <aside class="card contact-card" aria-labelledby="contact-title">
+        <h2 id="contact-title">Ingold Building Ltd</h2>
+        <p>Building in Ashburton and Mid Canterbury: new homes, renovations and extensions.</p>
+        <dl class="contact-list">
+          <dt>Phone</dt>
+          <dd>03 000 0000 <span class="placeholder-tag">sample placeholder</span></dd>
+          <dt>Email</dt>
+          <dd>quotes@example.co.nz <span class="placeholder-tag">sample placeholder</span></dd>
+          <dt>Area</dt>
+          <dd>Ashburton, New Zealand</dd>
+        </dl>
+        <p class="muted small">Contact details above are sample placeholders for this concept demo, not Ingold's real details.</p>
+      </aside>
+    </div>
+
+    <section id="owner-view" class="owner" aria-labelledby="owner-title">
+      <div class="container">
+        <div class="owner-head">
+          <div>
+            <h2 id="owner-title">Owner view <span class="badge">Craig's enquiry tracker</span></h2>
+            <p class="muted">Newest first. Change the status as jobs progress, then export to CSV for a spreadsheet.
+              In the live version, plans are attached to Craig's alert email and saved to the Google Sheet/Airtable tracker.</p>
+          </div>
+          <div class="owner-actions">
+            <button type="button" id="export-csv" class="btn btn-primary">Export CSV</button>
+            <button type="button" id="clear-all" class="btn btn-ghost">Clear demo data</button>
+          </div>
+        </div>
+        <p id="owner-status" class="owner-status" role="status" aria-live="polite"></p>
+        <p id="empty-state" class="empty-state">No enquiries yet. Submit the form above to see one appear here.</p>
+        <ul id="enquiry-list" class="enquiry-list" aria-label="Submitted enquiries"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="demo-note">Concept demo by Omar, not the official Ingold Building Ltd website</p>
+      <p>Ingold Building Ltd, Ashburton, New Zealand. Contact details shown are sample placeholders.
+        Visit the real site at <a href="https://www.ingoldbuilding.co.nz/" rel="noopener">ingoldbuilding.co.nz</a>.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
