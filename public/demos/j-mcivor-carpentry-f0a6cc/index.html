@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Maintenance Check | J McIvor Carpentry, Timaru (concept demo)</title>
+  <meta name="description" content="Concept demo of an online maintenance-check booking and free-quote form for J McIvor Carpentry, Timaru.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official J McIvor Carpentry website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#book">Skip to the booking form</a>
+
+  <header class="site-header">
+    <p class="demo-banner" role="note">Concept demo by Omar, not the official J McIvor Carpentry website</p>
+    <div class="wrap header-inner">
+      <p class="brand">
+        <span class="brand-mark" aria-hidden="true">JM</span>
+        <span>
+          <span class="brand-name">J McIvor Carpentry</span>
+          <span class="brand-place">Timaru, South Canterbury</span>
+        </span>
+      </p>
+      <nav aria-label="Page sections">
+        <a href="#book">Book</a>
+        <a href="#owner-view">Owner view</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Book a Maintenance Check</h1>
+        <p class="lead">Timaru homes take a beating from the weather. Ask J McIvor Carpentry for a maintenance check or a free quote on decking, doors and windows, renovations or general repairs. It takes about a minute.</p>
+        <p class="why-note"><strong>Why this demo?</strong> On the current website, the &ldquo;Schedule Your Maintenance Check&rdquo; link leads to a missing page. This form shows how that link could work instead.</p>
+      </div>
+    </section>
+
+    <div class="wrap layout">
+      <section id="book" class="card" aria-labelledby="form-title">
+        <div id="form-panel">
+          <h2 id="form-title">Request a check or free quote</h2>
+          <p class="hint">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+          <form id="enquiry-form" novalidate>
+            <div class="field">
+              <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+              <p id="name-error" class="error"></p>
+            </div>
+
+            <div class="field">
+              <label for="jobType">Type of job <span class="req" aria-hidden="true">*</span></label>
+              <select id="jobType" name="jobType" required>
+                <option value="maintenance-check" selected>Maintenance check</option>
+                <option value="decking">Decking</option>
+                <option value="doors-windows">Doors &amp; windows</option>
+                <option value="renovation">Renovation</option>
+                <option value="repairs">General repairs</option>
+                <option value="other">Other</option>
+              </select>
+              <p id="jobType-error" class="error"></p>
+            </div>
+
+            <div class="field">
+              <label for="description">What needs doing? <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="description" name="description" rows="4" maxlength="1000" required aria-describedby="description-hint"></textarea>
+              <p id="description-hint" class="field-hint">E.g. &ldquo;Annual check on a weatherboard house, sticking back door, deck boards going soft.&rdquo;</p>
+              <p id="description-error" class="error"></p>
+            </div>
+
+            <div class="field">
+              <label for="address">Suburb or street address <span class="req" aria-hidden="true">*</span></label>
+              <input id="address" name="address" type="text" autocomplete="street-address" maxlength="200" required placeholder="e.g. Highfield, Timaru">
+              <p id="address-error" class="error"></p>
+            </div>
+
+            <div class="field">
+              <label for="preferredDate">Preferred date <span class="optional">(optional)</span></label>
+              <input id="preferredDate" name="preferredDate" type="date">
+              <p id="preferredDate-error" class="error"></p>
+            </div>
+
+            <div class="field">
+              <label for="contactMethod">How should we contact you? <span class="req" aria-hidden="true">*</span></label>
+              <select id="contactMethod" name="contactMethod" required>
+                <option value="email" selected>Email</option>
+                <option value="phone">Phone</option>
+              </select>
+              <p id="contactMethod-error" class="error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email <span class="req" data-required-for="email" aria-hidden="true">*</span><span class="optional" data-optional-for="email">(optional)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email">
+                <p id="email-error" class="error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="req" data-required-for="phone" aria-hidden="true">*</span><span class="optional" data-optional-for="phone">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+                <p id="phone-error" class="error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="photoName">Photo of the job <span class="optional">(optional)</span></label>
+              <input id="photoName" name="photoName" type="file" accept="image/*" aria-describedby="photoName-hint">
+              <p id="photoName-hint" class="field-hint">JPG, PNG, HEIC or WebP. In this demo only the file name is kept; nothing is uploaded.</p>
+              <p id="photoName-error" class="error"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send my request</button>
+            <p class="small">In the real version, your request would be added to the J McIvor Carpentry Google Sheet tracker and trigger an instant email alert to the team. In this demo it is only saved in this browser.</p>
+          </form>
+        </div>
+
+        <div id="confirmation" class="confirmation" hidden>
+          <div role="status" aria-live="polite">
+            <h2 id="confirmation-title" tabindex="-1">Thanks, request received!</h2>
+            <p id="confirmation-text">We&rsquo;ll be in touch shortly.</p>
+            <dl class="summary">
+              <dt>Job type</dt><dd id="confirm-jobType"></dd>
+              <dt>Address</dt><dd id="confirm-address"></dd>
+              <dt>Preferred date</dt><dd id="confirm-date"></dd>
+              <dt>Contact by</dt><dd id="confirm-contact"></dd>
+            </dl>
+          </div>
+          <div class="simulated">
+            <h3>What would happen next (simulated)</h3>
+            <ul>
+              <li><strong>Google Sheet tracker:</strong> a new row is added with your details and status &ldquo;new&rdquo;. Here, see the Owner view below.</li>
+              <li><strong>Instant email alert:</strong> the team gets an email straight away so nobody misses a booking. No email is sent in this demo.</li>
+            </ul>
+          </div>
+          <button type="button" id="new-enquiry" class="btn btn-secondary">Make another enquiry</button>
+        </div>
+      </section>
+
+      <aside class="card contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>J McIvor Carpentry, Timaru</p>
+        <ul class="contact-list">
+          <li>Phone: 03 000 0000 <span class="placeholder-tag">Sample placeholder</span></li>
+          <li>Email: hello@example.co.nz <span class="placeholder-tag">Sample placeholder</span></li>
+        </ul>
+        <p class="small">These are not the business&rsquo;s real contact details.</p>
+      </aside>
+    </div>
+
+    <section id="owner-view" class="owner" aria-labelledby="owner-title">
+      <div class="wrap">
+        <div class="owner-head">
+          <div>
+            <h2 id="owner-title">Owner view: enquiry tracker</h2>
+            <p class="small">Stands in for the Google Sheet tracker. Enquiries are saved in this browser only (localStorage), newest first.</p>
+          </div>
+          <button type="button" id="export-csv" class="btn btn-secondary">Export CSV</button>
+        </div>
+        <p id="storage-warning" class="warning" role="alert" hidden></p>
+        <p id="owner-status" class="visually-hidden" aria-live="polite"></p>
+        <p id="empty-state" class="empty-state">No enquiries yet. Submit the form above to see one appear here.</p>
+        <ol id="enquiry-list" class="enquiry-list"></ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official J McIvor Carpentry website</strong></p>
+      <p class="small">Business name, location and services are taken from publicly visible information. Contact details shown are sample placeholders. No data leaves your browser.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
