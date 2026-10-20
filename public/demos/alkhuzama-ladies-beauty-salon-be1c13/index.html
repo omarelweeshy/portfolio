@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alkhuzama Ladies Beauty Salon – Home-visit booking (concept demo)</title>
+  <meta name="description" content="Concept demo of a bilingual home-visit booking form and owner tracker for Alkhuzama Ladies Beauty Salon, Riyadh.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Alkhuzama Ladies Beauty Salon website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#booking" data-i18n="skip">Skip to booking form</a>
+
+  <header class="site-header">
+    <div class="demo-banner" role="note">
+      <strong>Concept demo by Omar, not the official Alkhuzama Ladies Beauty Salon website</strong>
+      <span class="demo-banner-ar" lang="ar" dir="rtl">نموذج تجريبي من عمر، وليس الموقع الرسمي لصالون الخزامى</span>
+    </div>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">خ</span>
+        <div>
+          <p class="brand-name">Alkhuzama Ladies Beauty Salon</p>
+          <p class="brand-sub" data-i18n="tagline">Home-visit beauty services · Riyadh &amp; Jeddah</p>
+        </div>
+      </div>
+      <button type="button" id="lang-toggle" class="btn btn-ghost" lang="ar" aria-label="التبديل إلى العربية">العربية</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section id="booking" class="card" aria-labelledby="booking-title">
+      <div id="form-screen">
+        <h1 id="booking-title" data-i18n="formTitle">Book a home visit</h1>
+        <p class="lead" data-i18n="formLead">Tell us what you need and when. We will confirm availability on WhatsApp.</p>
+
+        <form id="enquiry-form" novalidate>
+          <p id="form-error-summary" class="form-summary" role="alert" hidden></p>
+
+          <div class="field">
+            <label for="name" data-i18n="nameLabel">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="60" aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="service" data-i18n="serviceLabel">Service</label>
+            <select id="service" name="service" aria-describedby="service-error">
+              <option value="" data-i18n="choose">Choose…</option>
+              <option value="hair">Hair styling</option>
+              <option value="makeup">Makeup</option>
+              <option value="bridal">Bridal package</option>
+              <option value="henna">Henna</option>
+              <option value="nails">Manicure &amp; pedicure</option>
+              <option value="skincare">Facial &amp; skincare</option>
+            </select>
+            <p id="service-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="city" data-i18n="cityLabel">City</label>
+              <select id="city" name="city" aria-describedby="city-error">
+                <option value="" data-i18n="choose">Choose…</option>
+                <option value="riyadh" data-i18n="riyadh">Riyadh</option>
+                <option value="jeddah" data-i18n="jeddah">Jeddah</option>
+              </select>
+              <p id="city-error" class="error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="district" data-i18n="districtLabel">District</label>
+              <input id="district" name="district" type="text" maxlength="80" autocomplete="address-level3" aria-describedby="district-error" data-i18n-placeholder="districtPlaceholder" placeholder="e.g. Al Olaya">
+              <p id="district-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="date" data-i18n="dateLabel">Preferred date</label>
+              <input id="date" name="date" type="date" aria-describedby="date-error">
+              <p id="date-error" class="error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="time" data-i18n="timeLabel">Preferred time</label>
+              <input id="time" name="time" type="time" aria-describedby="time-error">
+              <p id="time-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone" data-i18n="phoneLabel">Mobile number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X XXX XXXX" aria-describedby="phone-hint phone-error">
+            <p id="phone-hint" class="hint" data-i18n="phoneHint">Saudi mobile, e.g. 05X XXX XXXX or +966 5X XXX XXXX.</p>
+            <p id="phone-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field choice" aria-describedby="contact-error">
+            <legend data-i18n="contactLegend">Preferred contact</legend>
+            <div class="choice-row">
+              <label class="radio"><input type="radio" name="contact" value="whatsapp" checked> <span data-i18n="whatsapp">WhatsApp</span></label>
+              <label class="radio"><input type="radio" name="contact" value="call"> <span data-i18n="call">Phone call</span></label>
+            </div>
+            <p id="contact-error" class="error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="notes"><span data-i18n="notesLabel">Notes</span> <span class="optional" data-i18n="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" maxlength="500" aria-describedby="notes-error" data-i18n-placeholder="notesPlaceholder" placeholder="e.g. Bridal trial for 3 people, building has no lift"></textarea>
+            <p id="notes-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="photoName"><span data-i18n="photoLabel">Inspiration photo file name</span> <span class="optional" data-i18n="optional">(optional)</span></label>
+            <input id="photoName" name="photoName" type="text" maxlength="120" dir="ltr" placeholder="look.jpg" aria-describedby="photo-hint photoName-error">
+            <p id="photo-hint" class="hint" data-i18n="photoHint">Demo only: just the file name is saved (.jpg, .png, .webp, .heic), nothing is uploaded.</p>
+            <p id="photoName-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="submit">Request booking</button>
+        </form>
+      </div>
+
+      <div id="confirmation" class="confirmation" tabindex="-1" hidden>
+        <div class="check" aria-hidden="true">✓</div>
+        <h2 data-i18n="confirmTitle">Booking request received</h2>
+        <p data-i18n="confirmLead">Thank you! Here is your request. Tap below to send it to the salon on WhatsApp.</p>
+        <dl id="confirmation-summary" class="summary"></dl>
+        <div class="confirm-actions">
+          <a id="whatsapp-link" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer" data-i18n="whatsappBtn">Confirm on WhatsApp</a>
+          <button type="button" id="new-booking" class="btn btn-ghost" data-i18n="newBooking">New booking</button>
+        </div>
+        <p class="hint"><span data-i18n="sampleNumber">Salon WhatsApp (sample placeholder number):</span> <span dir="ltr">+966 50 000 0000</span></p>
+      </div>
+    </section>
+
+    <section id="owner-view" class="card owner" aria-labelledby="owner-title">
+      <div class="owner-head">
+        <div>
+          <h2 id="owner-title"><span data-i18n="ownerTitle">Owner view</span></h2>
+          <p class="lead" data-i18n="ownerLead">Every booking lands here, newest first. Update the status as you reply.</p>
+        </div>
+        <button type="button" id="export-csv" class="btn btn-ghost" data-i18n="exportCsv">Export CSV</button>
+      </div>
+      <p id="owner-count" class="count" aria-live="polite"></p>
+      <p id="empty-state" class="empty" data-i18n="empty">No bookings yet. Submit the form to see it appear here.</p>
+      <ul id="enquiry-list" class="enquiry-list"></ul>
+      <p class="hint" data-i18n="ownerNote">Stored only in this browser (localStorage) to stand in for a Google Sheet / Airtable board.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Concept demo by Omar, not the official Alkhuzama Ladies Beauty Salon website</strong></p>
+    <p data-i18n="footerNote">Business name and location (Riyadh) are as publicly shown; services, prices and contact details are sample placeholders. Sample WhatsApp: +966 50 000 0000.</p>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
