@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Zaisha Salon booking concept demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Zaisha Salon website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#book" data-i18n="skip">Skip to booking form</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <div>
+          <p class="brand-name" data-i18n="brandName">Zaisha Salon</p>
+          <p class="brand-sub" data-i18n="brandSub">Ladies' salon, Riyadh, Saudi Arabia</p>
+        </div>
+      </div>
+      <button type="button" id="lang-toggle" class="btn btn-ghost" lang="ar">العربية</button>
+    </div>
+    <p class="disclaimer wrap">
+      <strong lang="en" dir="ltr">Concept demo by Omar, not the official Zaisha Salon website</strong>
+      <span lang="ar" dir="rtl">نموذج تجريبي من إعداد عمر، وليس الموقع الرسمي لصالون زيشا</span>
+    </p>
+  </header>
+
+  <main id="main">
+    <div class="wrap hero">
+      <h1 data-i18n="heroTitle">One booking form, one set of contact details</h1>
+      <p data-i18n="heroLead">This sample shows how Zaisha Salon could stop bookings leaking to a dead email address, a wrong branch number or a broken WhatsApp link.</p>
+      <nav class="hero-nav" aria-label="Page sections">
+        <a href="#audit" data-i18n="navAudit">1. Contact audit</a>
+        <a href="#book" data-i18n="navBook">2. Booking form</a>
+        <a href="#owner-view" data-i18n="navOwner">3. Owner view</a>
+      </nav>
+    </div>
+
+    <section id="audit" class="wrap block" aria-labelledby="audit-title">
+      <h2 id="audit-title" data-i18n="auditTitle">1. Contact audit</h2>
+      <p class="muted" data-i18n="auditLead">Recreated mock screenshots (not real captures). Numbers and emails are sample placeholders that illustrate each problem type.</p>
+      <div class="audit-grid">
+        <figure class="shot">
+          <div class="shot-frame" aria-hidden="true">
+            <div class="shot-bar"><span></span><span></span><span></span><em>zaishasalon.com/contact</em></div>
+            <div class="shot-body">
+              <p class="shot-label">Email</p>
+              <p class="shot-value">info@zaisha-sample.example</p>
+              <p class="shot-alert">Mail delivery failed: address not found</p>
+            </div>
+          </div>
+          <figcaption>
+            <strong data-i18n="a1Title">Inconsistency 1: dead email address</strong>
+            <span data-i18n="a1Text">The contact email bounces, so every enquiry sent there is lost without anyone noticing.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-frame" aria-hidden="true">
+            <div class="shot-bar"><span></span><span></span><span></span><em>zaishasalon.com/branches</em></div>
+            <div class="shot-body">
+              <p class="shot-label">Branch 2</p>
+              <p class="shot-value">+966 11 000 0001</p>
+              <p class="shot-alert">Answered by: Branch 1</p>
+            </div>
+          </div>
+          <figcaption>
+            <strong data-i18n="a2Title">Inconsistency 2: wrong branch number</strong>
+            <span data-i18n="a2Text">A branch is listed with another branch's number, so clients reach the wrong team and the booking is not recorded.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-frame" aria-hidden="true">
+            <div class="shot-bar"><span></span><span></span><span></span><em>Header vs footer</em></div>
+            <div class="shot-body">
+              <p class="shot-label">Header</p>
+              <p class="shot-value">+966 50 000 0001</p>
+              <p class="shot-label">Footer</p>
+              <p class="shot-value strike">+966 55 000 0002</p>
+            </div>
+          </div>
+          <figcaption>
+            <strong data-i18n="a3Title">Inconsistency 3: different numbers on different pages</strong>
+            <span data-i18n="a3Text">The header, footer and shop pages show different numbers, so clients cannot tell which one is current.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-frame" aria-hidden="true">
+            <div class="shot-bar"><span></span><span></span><span></span><em>wa.me/0500000000</em></div>
+            <div class="shot-body">
+              <p class="shot-label">WhatsApp</p>
+              <p class="shot-alert">Phone number shared via url is invalid.</p>
+            </div>
+          </div>
+          <figcaption>
+            <strong data-i18n="a4Title">Broken WhatsApp link</strong>
+            <span data-i18n="a4Text">The WhatsApp button uses a local number without the 966 country code, so WhatsApp refuses to open the chat.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="fix-box">
+        <h3 data-i18n="fixTitle">The fix shown below</h3>
+        <dl class="contact-card">
+          <div><dt data-i18n="fixPhone">Phone and WhatsApp</dt><dd><span dir="ltr">+966 5X XXX XXXX</span> <span class="tag" data-i18n="placeholderTag">Sample placeholder</span></dd></div>
+          <div><dt data-i18n="fixEmail">Email</dt><dd><span dir="ltr">bookings@example.com</span> <span class="tag" data-i18n="placeholderTag">Sample placeholder</span></dd></div>
+          <div><dt data-i18n="fixBranches">Branches</dt><dd data-i18n="fixBranchesText">One list, used by the website, the form and WhatsApp</dd></div>
+        </dl>
+        <p class="muted small" data-i18n="priceNote">The public shop page notes that prices are tentative and confirmed after examination, so the form asks for an appointment request rather than a payment.</p>
+      </div>
+    </section>
+
+    <section id="book" class="wrap block" aria-labelledby="book-title">
+      <h2 id="book-title" data-i18n="bookTitle">2. Book an appointment</h2>
+      <p class="muted" data-i18n="bookLead">Takes about a minute. Fields marked * are required.</p>
+
+      <form id="booking-form" class="card" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="service"><span data-i18n="lService">Service</span> *</label>
+            <select id="service" name="service" required aria-describedby="service-error">
+              <option value="" data-i18n="choose">Choose…</option>
+              <option value="haircut">Haircut</option>
+              <option value="hair-colour">Hair colour</option>
+              <option value="hair-treatment">Hair treatment</option>
+              <option value="blow-dry">Blow-dry</option>
+              <option value="makeup">Makeup</option>
+              <option value="nails">Nails</option>
+              <option value="facial">Facial</option>
+              <option value="bridal">Bridal package</option>
+            </select>
+            <p id="service-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="branch"><span data-i18n="lBranch">Branch</span> *</label>
+            <select id="branch" name="branch" required aria-describedby="branch-error">
+              <option value="" data-i18n="choose">Choose…</option>
+              <option value="branch-1">Riyadh branch 1 (sample)</option>
+              <option value="branch-2">Riyadh branch 2 (sample)</option>
+              <option value="branch-3">Riyadh branch 3 (sample)</option>
+            </select>
+            <p id="branch-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="date"><span data-i18n="lDate">Date</span> *</label>
+            <input id="date" name="date" type="date" required aria-describedby="date-error">
+            <p id="date-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="time"><span data-i18n="lTime">Time</span> *</label>
+            <input id="time" name="time" type="time" min="10:00" max="21:30" step="1800" required aria-describedby="time-hint time-error">
+            <p id="time-hint" class="hint" data-i18n="hTime">Half-hour slots, 10:00 to 21:30</p>
+            <p id="time-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="name"><span data-i18n="lName">Your name</span> *</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone"><span data-i18n="lPhone">Mobile number</span> *</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" placeholder="05X XXX XXXX" required aria-describedby="phone-hint phone-error">
+            <p id="phone-hint" class="hint" data-i18n="hPhone">Saudi mobile, e.g. 05X XXX XXXX</p>
+            <p id="phone-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="contact"><span data-i18n="lContact">Preferred contact</span> *</label>
+            <select id="contact" name="contact" required aria-describedby="contact-error">
+              <option value="whatsapp" data-i18n="cWhatsapp">WhatsApp</option>
+              <option value="call" data-i18n="cCall">Phone call</option>
+            </select>
+            <p id="contact-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="photo"><span data-i18n="lPhoto">Reference photo (optional)</span></label>
+            <input id="photo" name="photo" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,image/*" aria-describedby="photo-hint photo-error">
+            <p id="photo-hint" class="hint" data-i18n="hPhoto">Only the file name is kept in this demo.</p>
+            <p id="photo-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="notes"><span data-i18n="lNotes">Notes (optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" maxlength="500" aria-describedby="notes-error"></textarea>
+            <p id="notes-error" class="error" aria-live="polite"></p>
+          </div>
+        </div>
+        <p id="form-status" class="form-status" role="alert"></p>
+        <button type="submit" class="btn btn-primary" data-i18n="submit">Request booking</button>
+      </form>
+
+      <div id="confirmation" class="card confirmation" tabindex="-1" hidden>
+        <h3 data-i18n="confTitle">Booking request received</h3>
+        <p><span data-i18n="confRef">Your booking reference:</span> <strong id="conf-ref" dir="ltr"></strong></p>
+        <dl id="conf-summary" class="summary"></dl>
+        <p class="muted" data-i18n="confNext">The salon confirms by WhatsApp. In this demo, the link below opens WhatsApp with the confirmation message ready to send.</p>
+        <div class="actions">
+          <a id="wa-link" class="btn btn-wa" href="#" target="_blank" rel="noopener noreferrer" data-i18n="confWa">Open WhatsApp confirmation</a>
+          <button type="button" id="new-booking" class="btn btn-ghost" data-i18n="confAgain">Make another booking</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="owner-view" class="wrap block" aria-labelledby="owner-title">
+      <h2 id="owner-title"><span data-i18n="ownerTitle">3. Owner view</span> <span class="sheet-tag">Google Sheet tracker (mock)</span></h2>
+      <p class="muted" data-i18n="ownerLead">Every booking lands in one tracker, newest first. Update the status as you go and export to CSV for Google Sheets. Stored only in this browser.</p>
+      <div class="owner-actions">
+        <button type="button" id="export-csv" class="btn btn-primary" data-i18n="export">Export CSV</button>
+        <button type="button" id="clear-data" class="btn btn-ghost" data-i18n="clear">Clear demo data</button>
+        <p id="owner-status" class="muted small" aria-live="polite"></p>
+      </div>
+      <p id="owner-empty" class="empty" data-i18n="ownerEmpty">No bookings yet. Submit the form above to see it appear here.</p>
+      <div class="sheet" role="region" aria-labelledby="owner-title" tabindex="0">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="thRef">Ref</th>
+              <th scope="col" data-i18n="thCreated">Received</th>
+              <th scope="col" data-i18n="thName">Name</th>
+              <th scope="col" data-i18n="thPhone">Phone</th>
+              <th scope="col" data-i18n="thService">Service</th>
+              <th scope="col" data-i18n="thBranch">Branch</th>
+              <th scope="col" data-i18n="thWhen">Date and time</th>
+              <th scope="col" data-i18n="thContact">Contact</th>
+              <th scope="col" data-i18n="thNotes">Notes</th>
+              <th scope="col" data-i18n="thStatus">Status</th>
+            </tr>
+          </thead>
+          <tbody id="enquiry-list"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong lang="en" dir="ltr">Concept demo by Omar, not the official Zaisha Salon website</strong></p>
+      <p lang="ar" dir="rtl">نموذج تجريبي من إعداد عمر، وليس الموقع الرسمي لصالون زيشا</p>
+      <p class="small" data-i18n="footerNote">All contact details on this page are sample placeholders. Nothing is sent anywhere: bookings stay in this browser.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
