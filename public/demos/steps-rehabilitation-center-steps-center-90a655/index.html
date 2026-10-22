@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request an assessment | Steps Rehabilitation Center (concept demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Steps Rehabilitation Center (Steps Center) website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#request">Skip to the enquiry form</a>
+
+  <header class="site-header">
+    <p class="demo-banner">Concept demo by Omar, not the official Steps Rehabilitation Center (Steps Center) website</p>
+    <div class="wrap header-inner">
+      <p class="brand">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Steps Rehabilitation Center <span class="brand-sub">Janabiya, Bahrain</span></span>
+      </p>
+      <nav aria-label="Demo sections">
+        <ul class="nav-list">
+          <li><a href="#request">Request an assessment</a></li>
+          <li><a href="#owner-view">Owner view</a></li>
+          <li><a href="#before-after">Homepage before/after</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Request an assessment for your child, online</h1>
+        <p class="lead">Instead of “call us to schedule an assessment”, parents fill in a short form in
+          about a minute. The Steps team in Janabiya calls back at the time that suits the family.</p>
+      </div>
+    </section>
+
+    <section id="request" class="wrap card" aria-labelledby="request-title">
+      <h2 id="request-title">Request an assessment</h2>
+      <p class="muted">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.
+        Please don't include medical or diagnostic details; we will talk about those in person.</p>
+
+      <div id="form-status" class="form-status" role="alert" aria-live="assertive"></div>
+
+      <form id="enquiry-form" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="parentName">Your name <span aria-hidden="true">*</span></label>
+            <input id="parentName" name="parentName" type="text" autocomplete="name" maxlength="80" required aria-describedby="parentName-error">
+            <p id="parentName-error" class="error"></p>
+          </div>
+
+          <div class="field">
+            <label for="childAge">Child's age (years) <span aria-hidden="true">*</span></label>
+            <input id="childAge" name="childAge" type="text" inputmode="numeric" maxlength="2" required aria-describedby="childAge-hint childAge-error">
+            <p id="childAge-hint" class="hint">A whole number from 0 to 18.</p>
+            <p id="childAge-error" class="error"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="therapy">What kind of help are you looking for? <span aria-hidden="true">*</span></label>
+            <select id="therapy" name="therapy" required aria-describedby="therapy-error">
+              <option value="">Please choose…</option>
+              <option value="speech">Speech &amp; language therapy</option>
+              <option value="occupational">Occupational therapy</option>
+              <option value="behaviour">Behaviour therapy</option>
+              <option value="special-education">Special education</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+            <p id="therapy-error" class="error"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="description">What would you like help with? (optional)</label>
+            <textarea id="description" name="description" rows="3" maxlength="500" aria-describedby="description-hint description-error"></textarea>
+            <p id="description-hint" class="hint">Please don't include medical or diagnostic details. <span id="description-count">0</span>/500</p>
+            <p id="description-error" class="error"></p>
+          </div>
+
+          <div class="field">
+            <label for="area">Town or area <span aria-hidden="true">*</span></label>
+            <input id="area" name="area" type="text" autocomplete="address-level2" maxlength="60" placeholder="e.g. Janabiya" required aria-describedby="area-error">
+            <p id="area-error" class="error"></p>
+          </div>
+
+          <div class="field">
+            <label for="contactMethod">How should we contact you? <span aria-hidden="true">*</span></label>
+            <select id="contactMethod" name="contactMethod" required aria-describedby="contactMethod-error">
+              <option value="">Please choose…</option>
+              <option value="phone">Phone call</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="email">Email</option>
+            </select>
+            <p id="contactMethod-error" class="error"></p>
+          </div>
+
+          <div class="field">
+            <label for="contactValue" id="contactValue-label">Phone number or email <span aria-hidden="true">*</span></label>
+            <input id="contactValue" name="contactValue" type="text" maxlength="120" required aria-describedby="contactValue-error">
+            <p id="contactValue-error" class="error"></p>
+          </div>
+
+          <div class="field">
+            <label for="callbackTime">Preferred callback time <span aria-hidden="true">*</span></label>
+            <select id="callbackTime" name="callbackTime" required aria-describedby="callbackTime-error">
+              <option value="">Please choose…</option>
+              <option value="morning">Morning (8am to 12pm)</option>
+              <option value="afternoon">Afternoon (12pm to 4pm)</option>
+              <option value="evening">Evening (4pm to 7pm)</option>
+            </select>
+            <p id="callbackTime-error" class="error"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="photoName">Photo or document name (optional)</label>
+            <input id="photoName" name="photoName" type="text" maxlength="120" placeholder="e.g. school-report.pdf" aria-describedby="photoName-hint photoName-error">
+            <p id="photoName-hint" class="hint">Demo only: type a file name; nothing is uploaded. In the real version parents could attach a school report or photo.</p>
+            <p id="photoName-error" class="error"></p>
+          </div>
+
+          <div class="field field-wide consent">
+            <input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error">
+            <label for="consent">I agree that Steps Center may contact me about this assessment request. <span aria-hidden="true">*</span></label>
+            <p id="consent-error" class="error"></p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send my request</button>
+      </form>
+
+      <div id="confirmation" class="confirmation" hidden tabindex="-1" aria-labelledby="confirmation-title">
+        <h3 id="confirmation-title">Thank you, your request has been received</h3>
+        <dl class="summary">
+          <div><dt>Reference</dt><dd id="conf-id"></dd></div>
+          <div><dt>We will call back</dt><dd id="conf-callback"></dd></div>
+          <div><dt>Contact by</dt><dd id="conf-contact"></dd></div>
+        </dl>
+        <p id="conf-channel-note" class="real-note"></p>
+
+        <h4>Acknowledgement email preview</h4>
+        <p class="real-note">In the real version this email is sent automatically, in English and Arabic, and the
+          request is added to the centre's Google Sheet or Excel enquiry tracker.</p>
+        <div class="ack-grid">
+          <figure class="ack">
+            <figcaption>English</figcaption>
+            <pre id="ack-en" class="ack-body" lang="en"></pre>
+          </figure>
+          <figure class="ack">
+            <figcaption>العربية (Arabic)</figcaption>
+            <pre id="ack-ar" class="ack-body ack-ar" lang="ar" dir="rtl"></pre>
+          </figure>
+        </div>
+        <button type="button" id="new-enquiry" class="btn btn-secondary">Send another request</button>
+      </div>
+    </section>
+
+    <section id="owner-view" class="wrap card" aria-labelledby="owner-title">
+      <div class="owner-head">
+        <div>
+          <h2 id="owner-title">Owner view: enquiry tracker</h2>
+          <p class="muted">What the centre would see in its Google Sheet or Excel tracker. In this demo enquiries
+            are kept only in this browser.</p>
+        </div>
+        <div class="owner-actions">
+          <button type="button" id="export-csv" class="btn btn-primary">Export CSV</button>
+          <button type="button" id="clear-enquiries" class="btn btn-secondary">Clear demo data</button>
+        </div>
+      </div>
+      <p id="owner-status" class="muted" role="status" aria-live="polite"></p>
+      <p id="owner-empty" class="empty">No enquiries yet. Submit the form above to see it appear here.</p>
+      <ul id="enquiry-list" class="enquiry-list" aria-label="Enquiries, newest first"></ul>
+    </section>
+
+    <section id="before-after" class="wrap card" aria-labelledby="ba-title">
+      <h2 id="ba-title">Homepage section: before and after</h2>
+      <p class="muted">A mock-up of the current homepage block that still shows placeholder text, rewritten in plain words.</p>
+      <div class="ba-grid">
+        <figure class="ba-panel ba-before">
+          <figcaption><span class="tag tag-before">Before</span> Current homepage (recreated)</figcaption>
+          <div class="mock-browser" aria-label="Recreated screenshot of the current section">
+            <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="mock-page">
+              <p class="mock-title">Welcome to Steps</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <span class="mock-link">Read more</span>
+              <p class="mock-flag">Placeholder copy, and the button goes nowhere (a “#” link).</p>
+            </div>
+          </div>
+        </figure>
+        <figure class="ba-panel ba-after">
+          <figcaption><span class="tag tag-after">After</span> Rewritten section</figcaption>
+          <div class="mock-browser">
+            <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="mock-page">
+              <p class="mock-title">Every child takes their own steps</p>
+              <p>At Steps Rehabilitation Center in Janabiya, we start with a friendly assessment of your child.
+                From there our therapists build a personalised, goal-oriented plan that can combine speech,
+                occupational and behaviour therapy with special education support.</p>
+              <a class="mock-cta" href="#request">Request an assessment online</a>
+              <p class="mock-flag mock-flag-ok">Clear message, one action, and the button opens the enquiry form.</p>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="demo-banner-footer">Concept demo by Omar, not the official Steps Rehabilitation Center (Steps Center) website</p>
+      <p>Steps Rehabilitation Center, Janabiya, Bahrain. Phone: sample placeholder. Email: sample placeholder.</p>
+      <p class="muted-dark">Demo data stays in this browser. No emails, messages or calls are sent.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
