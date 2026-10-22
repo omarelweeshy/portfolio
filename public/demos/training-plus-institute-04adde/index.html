@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training Plus Institute – Concept demo: security finding and online admission enquiry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Training Plus Institute website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <p class="brand">Training Plus Institute <span class="brand-loc">Manama, Bahrain</span></p>
+      <p class="demo-badge" role="note">Concept demo by Omar, not the official Training Plus Institute website</p>
+      <nav aria-label="Page sections">
+        <ul class="nav-list">
+          <li><a href="#report">Security finding</a></li>
+          <li><a href="#enquiry">Online enquiry</a></li>
+          <li><a href="#owner">Owner view</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section id="report" class="card" aria-labelledby="report-title">
+      <p class="eyebrow">Part 1 · Security finding</p>
+      <h1 id="report-title">Casino spam is showing on trainingplusbh.com</h1>
+      <p class="lead">While reviewing the public website (trainingplusbh.com) we found a block of Russian-language online-casino advertising injected into the page. Visitors and Google both see it, which harms trust and search ranking. This page summarises what we saw and how to fix it.</p>
+
+      <h2>What visitors see</h2>
+      <figure class="evidence">
+        <div id="spam-screenshot" class="mock-browser" aria-label="Recreated screenshot of the injected spam block">
+          <div class="mock-bar" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="mock-url">trainingplusbh.com</span>
+          </div>
+          <div class="mock-page">
+            <p class="mock-site-text">Welcome to Training Plus Institute …</p>
+            <div class="mock-spam" lang="ru">
+              <p class="mock-spam-title">Казино онлайн</p>
+              <p>В нашем казике представлены сотни популярных слотов и настольных игр.</p>
+              <p class="mock-spam-link">Играть сейчас →</p>
+            </div>
+          </div>
+        </div>
+        <figcaption>HTML recreation of the observed block (not a live capture). The Russian text is quoted verbatim as evidence; it translates roughly as “Our casino offers hundreds of popular slots and table games.”</figcaption>
+      </figure>
+
+      <h2>Outbound spam link</h2>
+      <p>The block links visitors away to a gambling site. Shown defanged (not clickable) so nobody opens it by accident:</p>
+      <p class="defanged"><code id="outbound-link">hxxps://casino-example[.]xyz/?ref=trainingplusbh</code></p>
+      <p class="note">Illustrative domain: the exact target was not recorded during this review and must be confirmed from the page source during clean-up.</p>
+
+      <div class="two-col">
+        <div>
+          <h2>Likely causes</h2>
+          <p class="note">Typical for a CMS site such as WordPress; to be confirmed by a forensic check.</p>
+          <ul id="causes" class="check-list">
+            <li>Outdated CMS core, plugins or theme with a known vulnerability.</li>
+            <li>Weak, reused or leaked admin / hosting / FTP passwords.</li>
+            <li>A “nulled” (pirated) theme or plugin carrying a backdoor.</li>
+            <li>Writable core files or insecure shared hosting letting malware persist.</li>
+            <li>Spam injected straight into the database (posts, widgets or options).</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Clean-up and hardening steps</h2>
+          <ol id="hardening" class="step-list">
+            <li>Take a full backup and a separate forensic copy of files and database.</li>
+            <li>Remove the injected content and backdoors from files and the database.</li>
+            <li>Update CMS core, plugins and theme; delete anything unused or nulled.</li>
+            <li>Rotate every credential: admin users, hosting, FTP/SFTP, database and API keys.</li>
+            <li>Turn on two-factor authentication for all admin accounts.</li>
+            <li>Add a web application firewall or security plugin with malware scanning.</li>
+            <li>Tighten file permissions and disable file editing from the admin dashboard.</li>
+            <li>Request a review in Google Search Console once the site is clean.</li>
+            <li>Set up uptime and change monitoring with alerts to the owner.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="enquiry" class="card" aria-labelledby="enquiry-title">
+      <p class="eyebrow">Part 2 · Replace the PDF admission forms</p>
+      <h2 id="enquiry-title">Course enquiry</h2>
+      <p class="lead">Instead of downloading a PDF admission form and an old 2019 schedule, applicants send a short enquiry online. Every enquiry lands in the owner's tracker below.</p>
+
+      <div id="form-status" class="sr-only" aria-live="polite"></div>
+
+      <form id="enquiry-form" novalidate>
+        <p class="note">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="error-name">
+          <p id="error-name" class="error" data-error-for="name"></p>
+        </div>
+
+        <div class="field">
+          <label for="f-course">Course of interest <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-course" name="course" required aria-describedby="error-course">
+            <option value="">Choose a course…</option>
+            <option value="English language">English language</option>
+            <option value="IT &amp; computer skills">IT &amp; computer skills</option>
+            <option value="Business &amp; management">Business &amp; management</option>
+            <option value="Accounting &amp; finance">Accounting &amp; finance</option>
+            <option value="Health &amp; safety">Health &amp; safety</option>
+            <option value="Other / not sure">Other / not sure</option>
+          </select>
+          <p id="error-course" class="error" data-error-for="course"></p>
+        </div>
+
+        <div class="field">
+          <label for="f-message">What would you like to learn? <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" rows="4" maxlength="1000" required aria-describedby="hint-message error-message"></textarea>
+          <p id="hint-message" class="hint">Your goals, preferred timing (morning, evening, weekend) or questions. 10–1000 characters.</p>
+          <p id="error-message" class="error" data-error-for="message"></p>
+        </div>
+
+        <div class="field">
+          <label for="f-area">Area or address <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-area" name="area" type="text" autocomplete="address-level2" maxlength="100" placeholder="e.g. Manama, Riffa, Muharraq" required aria-describedby="error-area">
+          <p id="error-area" class="error" data-error-for="area"></p>
+        </div>
+
+        <fieldset class="field" aria-describedby="error-preferredContact">
+          <legend>How should we contact you? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="preferredContact" value="email" checked> Email</label>
+            <label class="radio"><input type="radio" name="preferredContact" value="phone"> Phone call</label>
+            <label class="radio"><input type="radio" name="preferredContact" value="whatsapp"> WhatsApp</label>
+          </div>
+          <p id="error-preferredContact" class="error" data-error-for="preferredContact"></p>
+        </fieldset>
+
+        <div class="field-pair">
+          <div class="field">
+            <label for="f-email">Email <span class="cond">(required for email)</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com" aria-describedby="error-email">
+            <p id="error-email" class="error" data-error-for="email"></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Mobile number <span class="cond">(required for phone or WhatsApp)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+973 …" aria-describedby="error-phone">
+            <p id="error-phone" class="error" data-error-for="phone"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-photoName">CPR / ID copy file name <span class="cond">(optional)</span></label>
+          <input id="f-photoName" name="photoName" type="text" maxlength="120" placeholder="e.g. cpr-copy.jpg" aria-describedby="hint-photoName error-photoName">
+          <p id="hint-photoName" class="hint">Demo only: just the file name is recorded, nothing is uploaded. .jpg, .png, .heic, .webp or .pdf.</p>
+          <p id="error-photoName" class="error" data-error-for="photoName"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send enquiry</button>
+      </form>
+
+      <div id="confirmation" class="confirmation" hidden tabindex="-1" aria-labelledby="confirmation-title">
+        <h3 id="confirmation-title">Thank you, <span id="conf-name"></span>!</h3>
+        <p>Your enquiry about <strong id="conf-course"></strong> has been received.</p>
+        <p>Reference: <strong id="conf-id" class="mono"></strong></p>
+        <p id="conf-contact"></p>
+        <div id="conf-action" class="real-version" hidden>
+          <p id="conf-action-label" class="real-version-label"></p>
+          <p id="conf-action-text" class="real-version-text"></p>
+        </div>
+        <button type="button" id="send-another" class="btn btn-secondary">Send another enquiry</button>
+      </div>
+
+      <p class="contact-note">Institute contact: +973 XXXX XXXX · info@example.invalid (sample placeholder, not real contact details).</p>
+    </section>
+
+    <section id="owner" class="card" aria-labelledby="owner-title">
+      <p class="eyebrow">Part 3 · Tracker sheet</p>
+      <h2 id="owner-title">Owner view</h2>
+      <p class="lead">Every enquiry, newest first. Set the status as you follow up: <em>new</em>, <em>quoted</em> (fee offer sent), <em>won</em> (enrolled) or <em>lost</em>. Export to CSV for Excel or Google Sheets.</p>
+      <p class="note">Demo data is kept only in this browser (localStorage). The real version would use a secure, password-protected back office.</p>
+
+      <div class="owner-actions">
+        <button type="button" id="export-csv" class="btn btn-primary">Export CSV</button>
+        <button type="button" id="clear-data" class="btn btn-danger">Clear demo data</button>
+      </div>
+      <p id="owner-status" class="owner-status" aria-live="polite"></p>
+
+      <p id="owner-empty" class="empty">No enquiries yet. Send one with the form above and it will appear here.</p>
+      <ul id="owner-list" class="owner-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official Training Plus Institute website</strong></p>
+      <p>Sales sample for Training Plus Institute, Manama, Bahrain. Contact details shown are sample placeholders. No data leaves this browser.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
