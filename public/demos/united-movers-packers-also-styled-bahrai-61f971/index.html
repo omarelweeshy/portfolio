@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a moving quote | United Movers &amp; Packers (concept demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official United Movers &amp; Packers (also styled Bahrain Experts Movers) website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#quote">Skip to the quote form</a>
+
+  <header class="site-header">
+    <p class="demo-banner">Concept demo by Omar, not the official United Movers &amp; Packers (also styled Bahrain Experts Movers) website</p>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">UM</span>
+        <div>
+          <p class="brand-name">United Movers &amp; Packers</p>
+          <p class="brand-sub">Bahrain Experts Movers &middot; Al Hamalah, Bahrain</p>
+        </div>
+      </div>
+      <nav aria-label="Demo sections">
+        <ul class="nav-links">
+          <li><a href="#quote">Get a quote</a></li>
+          <li><a href="#owner-view">Owner view</a></li>
+          <li><a href="#site-fixes">Site fixes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <h1 id="hero-title">Moving in Bahrain? Get your quote in two minutes.</h1>
+        <p class="hero-lead">House and office moves, packing, wrapping and furniture assembly. Tell us about your move and we will come back with a quote, no phone tag needed.</p>
+        <ul class="hero-points">
+          <li>Moves across Bahrain</li>
+          <li>Packing &amp; wrapping</li>
+          <li>Furniture dismantling &amp; assembly</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="wrap layout">
+      <section id="quote" class="card" aria-labelledby="quote-title">
+        <h2 id="quote-title">Request your quote</h2>
+        <p class="muted">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+        <form id="quote-form" novalidate>
+          <div class="field">
+            <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="jobType">Type of job <span class="req" aria-hidden="true">*</span></label>
+              <select id="jobType" name="jobType" required aria-describedby="jobType-error">
+                <option value="">Choose a job type</option>
+                <option value="house-move">House / flat move</option>
+                <option value="office-move">Office move</option>
+                <option value="packing-only">Packing only</option>
+                <option value="furniture-assembly">Furniture dismantling &amp; assembly</option>
+              </select>
+              <p id="jobType-error" class="error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="propertySize">Property size <span class="req" aria-hidden="true">*</span></label>
+              <select id="propertySize" name="propertySize" required aria-describedby="propertySize-error">
+                <option value="">Choose a size</option>
+                <option value="studio">Studio</option>
+                <option value="1bhk">1 BHK flat</option>
+                <option value="2bhk">2 BHK flat</option>
+                <option value="3bhk">3 BHK flat</option>
+                <option value="4bhk">4 BHK or larger</option>
+                <option value="villa">Villa</option>
+                <option value="office">Office</option>
+              </select>
+              <p id="propertySize-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="fromArea">Moving from (area or address) <span class="req" aria-hidden="true">*</span></label>
+              <input id="fromArea" name="fromArea" type="text" list="bahrain-areas" maxlength="100" autocomplete="off" required aria-describedby="fromArea-hint fromArea-error">
+              <p id="fromArea-hint" class="hint">Start typing, e.g. Juffair or Riffa.</p>
+              <p id="fromArea-error" class="error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="toArea">Moving to (area or address) <span class="req" id="toArea-req" aria-hidden="true">*</span></label>
+              <input id="toArea" name="toArea" type="text" list="bahrain-areas" maxlength="100" autocomplete="off" aria-describedby="toArea-hint toArea-error">
+              <p id="toArea-hint" class="hint">Needed for house and office moves.</p>
+              <p id="toArea-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <datalist id="bahrain-areas">
+            <option value="Al Hamalah"></option>
+            <option value="Manama"></option>
+            <option value="Juffair"></option>
+            <option value="Seef"></option>
+            <option value="Adliya"></option>
+            <option value="Riffa"></option>
+            <option value="Muharraq"></option>
+            <option value="Isa Town"></option>
+            <option value="Hamad Town"></option>
+            <option value="Saar"></option>
+            <option value="Budaiya"></option>
+            <option value="Amwaj Islands"></option>
+            <option value="Busaiteen"></option>
+            <option value="Tubli"></option>
+            <option value="Sitra"></option>
+            <option value="Zallaq"></option>
+          </datalist>
+
+          <div class="field">
+            <label for="moveDate">Preferred move date <span class="req" aria-hidden="true">*</span></label>
+            <input id="moveDate" name="moveDate" type="date" required aria-describedby="moveDate-error">
+            <p id="moveDate-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field choice-group" aria-describedby="packing-error">
+            <legend>Packing <span class="req" aria-hidden="true">*</span></legend>
+            <label class="choice"><input type="radio" id="packing-none" name="packing" value="none"> <span>No packing, just the move</span></label>
+            <label class="choice"><input type="radio" id="packing-fragile" name="packing" value="fragile-only"> <span>Fragile items only (glass, TV, crockery)</span></label>
+            <label class="choice"><input type="radio" id="packing-full" name="packing" value="full"> <span>Full packing, wrapping &amp; assembly</span></label>
+            <p id="packing-error" class="error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="description">What needs moving? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="description" name="description" rows="4" maxlength="1000" required aria-describedby="description-hint description-error"></textarea>
+            <p id="description-hint" class="hint">Main furniture, number of boxes, floor and lift access. 10 to 1000 characters.</p>
+            <p id="description-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field choice-group choice-inline" aria-describedby="contactMethod-error">
+            <legend>How should we contact you? <span class="req" aria-hidden="true">*</span></legend>
+            <label class="choice"><input type="radio" id="contact-whatsapp" name="contactMethod" value="whatsapp"> <span>WhatsApp</span></label>
+            <label class="choice"><input type="radio" id="contact-phone" name="contactMethod" value="phone"> <span>Phone call</span></label>
+            <label class="choice"><input type="radio" id="contact-email" name="contactMethod" value="email"> <span>Email</span></label>
+            <p id="contactMethod-error" class="error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="phone">Mobile number <span class="req" id="phone-req" aria-hidden="true" hidden>*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" aria-describedby="phone-hint phone-error">
+              <p id="phone-hint" class="hint">Needed for WhatsApp or a call.</p>
+              <p id="phone-error" class="error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" id="email-req" aria-hidden="true" hidden>*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="email-hint email-error">
+              <p id="email-hint" class="hint">Needed if you prefer email.</p>
+              <p id="email-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="photoName">Photo of your items (optional file name)</label>
+            <input id="photoName" name="photoName" type="text" maxlength="120" placeholder="e.g. living-room.jpg" aria-describedby="photoName-hint photoName-error">
+            <p id="photoName-hint" class="hint">In this demo only the file name is kept; no photo is uploaded. You can type it or pick a photo below.</p>
+            <label class="file-pick" for="photoPicker">Pick a photo to fill in its name</label>
+            <input id="photoPicker" type="file" accept=".jpg,.jpeg,.png,.heic,.webp,image/*">
+            <p id="photoName-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <p id="form-status" class="form-status" role="alert"></p>
+          <button type="submit" class="btn btn-primary">Request my quote</button>
+        </form>
+
+        <div id="confirmation" class="confirmation" tabindex="-1" hidden>
+          <h2>Thank you, your quote request is in!</h2>
+          <p>Your reference: <strong id="confirm-ref"></strong></p>
+          <p id="confirm-summary"></p>
+          <div class="preview">
+            <h3>What happens in the real version</h3>
+            <p id="confirm-whatsapp" class="preview-text"></p>
+            <p id="confirm-sheet" class="preview-text"></p>
+          </div>
+          <button type="button" id="new-enquiry" class="btn btn-secondary">Send another request</button>
+        </div>
+      </section>
+
+      <aside class="card contact-card" aria-labelledby="contact-title">
+        <h2 id="contact-title">United Movers &amp; Packers</h2>
+        <p>Al Hamalah, Bahrain</p>
+        <p class="muted">Movers and packers: house and office moves, packing, wrapping and furniture assembly.</p>
+        <dl class="contact-list">
+          <dt>Phone</dt>
+          <dd>Sample placeholder (no real number shown)</dd>
+          <dt>Email</dt>
+          <dd>Sample placeholder (no real address shown)</dd>
+        </dl>
+        <p class="hint">Contact details on this page are sample placeholders and are not links.</p>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <section id="owner-view" class="card" aria-labelledby="owner-title">
+        <div class="owner-head">
+          <h2 id="owner-title">Owner view: incoming enquiries</h2>
+          <div class="owner-actions">
+            <button type="button" id="export-csv" class="btn btn-secondary">Export CSV</button>
+            <button type="button" id="clear-data" class="btn btn-quiet">Clear demo data</button>
+          </div>
+        </div>
+        <p class="muted">Saved in this browser only (localStorage). In the real version each enquiry is also a row in the owner's Google Sheet.</p>
+        <p id="owner-status" class="owner-status" role="status"></p>
+        <p id="empty-state" class="empty-state">No enquiries yet. Submit the form above to see it appear here.</p>
+        <ul id="enquiry-list" class="enquiry-list"></ul>
+      </section>
+
+      <section id="site-fixes" class="card" aria-labelledby="fixes-title">
+        <h2 id="fixes-title">Quick website clean-up fixes</h2>
+        <ol class="fixes">
+          <li><strong>One business name.</strong> The site mixes "United Movers &amp; Packers" and "Bahrain Experts Movers". Pick one main name for the logo, page titles and Google listing, and mention the other once as "also known as".</li>
+          <li><strong>A real quote form.</strong> Replace the phone/WhatsApp-only "Request your quote" call to action with a short form like this one, so every lead is saved, tracked and followed up.</li>
+          <li><strong>Mobile layout.</strong> Check every page at phone width: no sideways scrolling, tap targets at least 44px, and the quote button visible without hunting.</li>
+          <li><strong>Tidy service pages.</strong> One clear page per service (house moves, office moves, packing, furniture assembly) with real photos, areas covered and what is included.</li>
+          <li><strong>Consistent contact details.</strong> Show the same phone, WhatsApp and address on every page and in the footer, matching the Google Business profile.</li>
+          <li><strong>Page titles and descriptions.</strong> Give each page a unique title such as "Movers and packers in Bahrain | United Movers &amp; Packers" to help search results.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official United Movers &amp; Packers (also styled Bahrain Experts Movers) website</strong></p>
+      <p>United Movers &amp; Packers, Al Hamalah, Bahrain. Contact details shown are sample placeholders. No data leaves this browser.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
