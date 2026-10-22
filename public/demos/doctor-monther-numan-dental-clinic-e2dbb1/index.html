@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appointment form review – Doctor Monther Numan Dental Clinic (concept demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Doctor Monther Numan Dental Clinic website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <p class="demo-banner">Concept demo by Omar, not the official Doctor Monther Numan Dental Clinic website</p>
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">MN</span>
+        <div>
+          <p class="brand-name">Doctor Monther Numan Dental Clinic</p>
+          <p class="brand-sub">Dental care in Manama, Bahrain</p>
+        </div>
+      </div>
+      <nav aria-label="Sections">
+        <ul class="nav-list">
+          <li><a href="#memo">Review memo</a></li>
+          <li><a href="#book">Request appointment</a></li>
+          <li><a href="#tracker">Track booking</a></li>
+          <li><a href="#owner-view">Owner view</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section id="memo" class="card memo" aria-labelledby="memo-title">
+      <p class="eyebrow">Review memo · online appointment form</p>
+      <h1 id="memo-title">Your appointment form asks for more than it needs</h1>
+      <p>
+        The online appointment form on montherdental.com asks patients for their
+        <strong>CPR (ID) number</strong> and <strong>date of birth</strong> before they can request a visit,
+        and there is <strong>no privacy notice</strong> explaining why, who sees it, or how long it is kept.
+        Bookings are not confirmed back to the patient, so they cannot check what happens next.
+      </p>
+
+      <div class="memo-grid">
+        <div>
+          <h2>What we observed</h2>
+          <ul class="issue-list">
+            <li><span class="tag tag-risk">Sensitive</span> CPR number collected for a simple appointment request.</li>
+            <li><span class="tag tag-risk">Sensitive</span> Date of birth collected up front, before any visit.</li>
+            <li><span class="tag tag-warn">Missing</span> No privacy notice next to the form.</li>
+            <li><span class="tag tag-warn">Missing</span> No consent text or tick box.</li>
+            <li><span class="tag tag-warn">Missing</span> No confirmation by email or SMS, and no booking reference to track.</li>
+            <li><span class="tag tag-info">Note</span> The Arabic pages look dated (newest article seen is from 2015).</li>
+          </ul>
+        </div>
+        <div>
+          <h2>What we recommend</h2>
+          <ol class="fix-list">
+            <li><strong>Drop the CPR number</strong> from the online form, or ask for it only at the first visit at reception. If it must be kept, ask for the last 4 digits only.</li>
+            <li><strong>Drop the date of birth</strong> online; an age range or nothing at all is enough to book.</li>
+            <li><strong>Add a short privacy notice</strong>: what is collected, why, who sees it and how long it is kept.</li>
+            <li><strong>Add consent text</strong> with a tick box the patient must check before sending.</li>
+            <li><strong>Send a confirmation email or SMS</strong> (or WhatsApp) with a booking reference the patient can track.</li>
+            <li>Next step: refresh the Arabic site so both languages match.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="memo-note">The form below shows these fixes working. Try it, then look at the Owner view.</p>
+    </section>
+
+    <div class="two-col">
+      <section id="book" class="card" aria-labelledby="book-title">
+        <h2 id="book-title">Request an appointment</h2>
+        <p class="muted">Takes about a minute. We never ask for your CPR number or date of birth online.</p>
+
+        <form id="enquiry-form" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="name-error">
+            <p id="name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="jobType">Treatment</label>
+            <select id="jobType" name="jobType" required aria-describedby="jobType-error">
+              <option value="">Choose a treatment…</option>
+              <option value="checkup">Check-up &amp; cleaning</option>
+              <option value="filling">Filling</option>
+              <option value="root-canal">Root canal treatment</option>
+              <option value="braces">Braces / orthodontics</option>
+              <option value="whitening">Teeth whitening</option>
+              <option value="implant">Implant or crown</option>
+              <option value="emergency">Tooth pain / emergency</option>
+              <option value="other">Something else</option>
+            </select>
+            <p id="jobType-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="description">What do you need?</label>
+            <textarea id="description" name="description" rows="4" maxlength="1000" required aria-describedby="description-hint description-error"></textarea>
+            <p id="description-hint" class="hint">A sentence or two is enough. Please don't include ID numbers.</p>
+            <p id="description-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="area">Area or address</label>
+            <input id="area" name="area" type="text" autocomplete="address-level2" maxlength="120" placeholder="e.g. Juffair, Manama" required aria-describedby="area-error">
+            <p id="area-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="preferredContact">How should we confirm?</label>
+            <select id="preferredContact" name="preferredContact" required aria-describedby="preferredContact-error">
+              <option value="">Choose…</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone call / SMS</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+            <p id="preferredContact-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email <span class="req-note" data-for="email">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+              <p id="email-error" class="error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Mobile number <span class="req-note" data-for="phone">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+973 XXXX XXXX" aria-describedby="phone-error">
+              <p id="phone-error" class="error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="photoName">Photo of the problem (optional, file name only)</label>
+            <input id="photoName" name="photoName" type="text" maxlength="120" placeholder="e.g. tooth.jpg" aria-describedby="photoName-hint photoName-error">
+            <p id="photoName-hint" class="hint">Demo only: nothing is uploaded.</p>
+            <p id="photoName-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div id="privacy-notice" class="privacy">
+            <h3>Privacy notice (sample wording)</h3>
+            <p>
+              We collect your name, area, contact details and a short description only to arrange your appointment.
+              We do <strong>not</strong> ask for your CPR number or date of birth online. Only clinic staff can see
+              your request, it is never sold or shared for marketing, and it is deleted after 12 months
+              unless you become a patient. You can ask us to delete it at any time.
+            </p>
+          </div>
+
+          <div class="field field-check">
+            <input id="consent" name="consent" type="checkbox" aria-describedby="consent-error">
+            <label for="consent">I have read the privacy notice and agree that the clinic may contact me about this request.</label>
+            <p id="consent-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <p id="form-status" class="form-status" role="status"></p>
+          <button type="submit" class="btn btn-primary">Send request</button>
+        </form>
+
+        <div id="confirmation" class="confirmation" hidden tabindex="-1">
+          <h3>Thank you, <span id="confirmation-name"></span>!</h3>
+          <p>Your request for <strong id="confirmation-treatment"></strong> has been received.</p>
+          <p class="ref-box">Booking reference <span id="confirmation-ref" class="ref"></span></p>
+          <p class="muted">Keep this reference to track your booking below.</p>
+          <div class="preview">
+            <p id="confirmation-channel" class="preview-label"></p>
+            <p id="confirmation-message" class="preview-message"></p>
+          </div>
+          <button type="button" id="new-enquiry" class="btn btn-secondary">Send another request</button>
+        </div>
+      </section>
+
+      <div class="side-col">
+        <section id="tracker" class="card" aria-labelledby="tracker-title">
+          <h2 id="tracker-title">Track your booking</h2>
+          <form id="track-form" class="track-form" novalidate>
+            <label for="track-ref">Booking reference</label>
+            <div class="inline-controls">
+              <input id="track-ref" name="track-ref" type="text" placeholder="MND-YYYYMMDD-XXXX" autocomplete="off" spellcheck="false">
+              <button type="submit" id="track-button" class="btn btn-primary">Track</button>
+            </div>
+          </form>
+          <div id="track-result" class="track-result" aria-live="polite"></div>
+        </section>
+
+        <section class="card contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p class="tag tag-info">Sample placeholder</p>
+          <dl class="contact-list">
+            <dt>Clinic</dt><dd>Doctor Monther Numan Dental Clinic</dd>
+            <dt>Location</dt><dd>Manama, Bahrain</dd>
+            <dt>Phone</dt><dd>+973 XXXX XXXX (sample placeholder)</dd>
+            <dt>Email</dt><dd>bookings@clinic.example (sample placeholder)</dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+
+    <section id="owner-view" class="card" aria-labelledby="owner-title">
+      <div class="owner-head">
+        <div>
+          <h2 id="owner-title">Owner view</h2>
+          <p class="muted">Requests saved in this browser only (localStorage), newest first.</p>
+        </div>
+        <div class="owner-actions">
+          <button type="button" id="export-csv" class="btn btn-secondary">Export CSV</button>
+          <button type="button" id="clear-data" class="btn btn-ghost">Clear demo data</button>
+        </div>
+      </div>
+      <p id="owner-status" class="form-status" role="status"></p>
+      <p id="empty-state" class="empty-state">No requests yet. Send one with the form above and it will appear here.</p>
+      <ul id="enquiry-list" class="enquiry-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official Doctor Monther Numan Dental Clinic website</strong></p>
+      <p class="muted">Business name and location from public information. Contact details are sample placeholders. Nothing is sent: no email, SMS or WhatsApp.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
