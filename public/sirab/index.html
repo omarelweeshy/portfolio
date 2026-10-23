@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Reem+Kufi:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/sirab/assets/index-Bh7FdsLd.js"></script>
-    <link rel="stylesheet" crossorigin href="/sirab/assets/index-CyfcQ_iK.css">
+    <script type="module" crossorigin src="/sirab/assets/index-Bhbh_P3f.js"></script>
+    <link rel="stylesheet" crossorigin href="/sirab/assets/index-BVx8ZoaJ.css">
   </head>
   <body class="is-loading">
     <div class="grain" aria-hidden="true"></div>
@@ -27,15 +27,23 @@
       <span class="cursor__ring"><span class="cursor__label"></span></span>
     </div>
 
-    <div class="preloader" aria-hidden="true">
+    <div class="preloader">
       <div class="preloader__inner">
-        <p class="preloader__ar">سراب</p>
-        <p class="preloader__word">SIRAB</p>
-        <div class="preloader__row">
+        <p class="preloader__ar" aria-hidden="true">سراب</p>
+        <p class="preloader__word" aria-hidden="true">SIRAB</p>
+        <div class="preloader__row" aria-hidden="true">
           <span class="preloader__note">Reading the wind</span>
           <span class="preloader__count">000</span>
         </div>
-        <div class="preloader__bar"><span></span></div>
+        <div class="preloader__bar" aria-hidden="true"><span></span></div>
+        <div class="gate" hidden>
+          <button type="button" class="gate__on" data-enter="on" data-cursor="Enter">
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Enter with sound
+          </button>
+          <button type="button" class="gate__off" data-enter="off">Enter without sound</button>
+          <p class="gate__note">Best with headphones. Press M to mute at any time.</p>
+        </div>
       </div>
     </div>
 
@@ -48,7 +56,13 @@
         <a href="#route" data-scroll-to>Route</a>
         <a href="#camp" data-scroll-to>Camp</a>
       </nav>
-      <a href="#request" class="nav__cta magnetic" data-scroll-to data-cursor="Go">Request</a>
+      <div class="nav__right">
+        <button type="button" class="sound-toggle" aria-pressed="false" aria-label="Sound" data-cursor="Sound">
+          <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="sound-toggle__label">Sound off</span>
+        </button>
+        <a href="#request" class="nav__cta magnetic" data-scroll-to data-cursor="Go">Request</a>
+      </div>
     </header>
     <div class="progress" aria-hidden="true"><span></span></div>
 
@@ -279,7 +293,7 @@
       <div class="footer__grid">
         <p>
           <strong>A concept site.</strong> Sirab is not a real company and takes no bookings. Every dune,
-          star and map line on this page is generated in code.
+          star, map line and sound on this page is generated in code.
         </p>
         <nav aria-label="Footer">
           <a href="#journeys" data-scroll-to>Journeys</a>

@@ -78,8 +78,8 @@ export const projects: Project[] = [
     year: "2026",
     category: "Motion design / WebGL",
     summary:
-      "A cinematic site for a fictional desert expedition company. Hand-written WebGL dunes, a route map that draws itself from real coordinates, a canvas night sky and a sandstorm transition. Every visual is generated in code.",
-    stack: ["TypeScript", "WebGL / GLSL", "GSAP", "Lenis", "Vite"],
+      "A cinematic site for a fictional desert expedition company. Hand-written WebGL dunes, a route map that draws itself from real coordinates, a sandstorm transition and a soundscape synthesised live in the browser. Every visual and sound is generated in code.",
+    stack: ["TypeScript", "WebGL / GLSL", "Web Audio", "GSAP", "Vite"],
     status: "Concept site, fictional brand",
     visual: "image",
     image: "/work/sirab.jpg",
