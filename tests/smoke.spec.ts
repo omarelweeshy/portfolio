@@ -58,6 +58,12 @@ test("unlisted concept demos are kept out of search", async ({ request }) => {
   expect(res.headers()["x-robots-tag"]).toBe("noindex, nofollow");
 });
 
+test("Sirab concept site is served at /sirab", async ({ request }) => {
+  const res = await request.get("/sirab");
+  expect(res.status()).toBe(200);
+  expect(await res.text()).toContain("<title>Sirab");
+});
+
 test("unknown routes return 404", async ({ request }) => {
   const res = await request.get("/this-page-does-not-exist");
   expect(res.status()).toBe(404);

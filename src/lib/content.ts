@@ -73,6 +73,20 @@ export const projects: Project[] = [
     repo: "https://github.com/omarelweeshy/docintel-ai",
   },
   {
+    slug: "sirab",
+    name: "Sirab Expeditions",
+    year: "2026",
+    category: "Motion design / WebGL",
+    summary:
+      "A cinematic site for a fictional desert expedition company. Hand-written WebGL dunes, a route map that draws itself from real coordinates, a canvas night sky and a sandstorm transition. Every visual is generated in code.",
+    stack: ["TypeScript", "WebGL / GLSL", "GSAP", "Lenis", "Vite"],
+    status: "Concept site, fictional brand",
+    visual: "image",
+    image: "/work/sirab.jpg",
+    demo: "https://omarelweeshy.vercel.app/sirab",
+    repo: "https://github.com/omarelweeshy/sirab-expeditions",
+  },
+  {
     slug: "forecast",
     name: "Donation Forecast",
     year: "2026",
