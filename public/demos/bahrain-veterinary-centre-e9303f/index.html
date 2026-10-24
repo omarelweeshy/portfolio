@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a vet appointment | Bahrain Veterinary Centre (concept demo)</title>
+  <meta name="description" content="Request a vet appointment online at Bahrain Veterinary Centre, Maqabah (Budaiya Highway), Bahrain. Concept demo by Omar, not the official website.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div data-concept-banner role="note" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:10px 14px;background:#111827;color:#f9fafb;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;border-bottom:3px solid #f59e0b">Concept demo by Omar. Not the official Bahrain Veterinary Centre website. Nothing you enter here is sent anywhere.</div>
+  <a class="skip-link" href="#request">Skip to the appointment form</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">BVC</span>
+        <div>
+          <p class="brand-name">Bahrain Veterinary Centre</p>
+          <p class="brand-place">Maqabah (Budaiya Highway), Bahrain</p>
+        </div>
+      </div>
+      <p class="demo-badge">Concept demo by Omar, not the official Bahrain Veterinary Centre website</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Online appointment requests, back on</h1>
+        <p>Tell us about your pet and pick a day and time that suits you. The clinic replies to confirm your slot, so the phone lines stay free for emergencies.</p>
+        <p class="hero-note">Clinic phone: <span class="placeholder">+973 XXXX XXXX (sample placeholder)</span></p>
+      </div>
+    </section>
+
+    <section id="request" class="wrap card" aria-labelledby="request-title">
+      <h2 id="request-title">Request a vet appointment</h2>
+
+      <form id="enquiry-form" novalidate>
+        <p class="form-intro">All fields are required unless marked optional.</p>
+        <div id="form-error" class="form-alert" role="alert" hidden></div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="ownerName">Your name</label>
+            <input id="ownerName" name="ownerName" type="text" autocomplete="name" maxlength="60" aria-describedby="ownerName-error">
+            <p id="ownerName-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="petType">Pet type</label>
+            <select id="petType" name="petType" aria-describedby="petType-error">
+              <option value="">Choose…</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="bird">Bird</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="small-pet">Small pet (hamster, guinea pig…)</option>
+              <option value="reptile">Reptile</option>
+              <option value="other">Other</option>
+            </select>
+            <p id="petType-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="visitType">Type of visit</label>
+            <select id="visitType" name="visitType" aria-describedby="visitType-error">
+              <option value="">Choose…</option>
+              <option value="check-up">Check-up</option>
+              <option value="vaccination">Vaccination</option>
+              <option value="sick-or-injured">Sick or injured</option>
+              <option value="dental">Dental</option>
+              <option value="surgery-consult">Surgery consultation</option>
+              <option value="other">Other</option>
+            </select>
+            <p id="visitType-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="area">Your area or address</label>
+            <input id="area" name="area" type="text" autocomplete="address-level2" maxlength="80" placeholder="e.g. Budaiya" aria-describedby="area-error">
+            <p id="area-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="reason">Reason for the visit</label>
+            <textarea id="reason" name="reason" rows="4" maxlength="500" aria-describedby="reason-hint reason-error"></textarea>
+            <p id="reason-hint" class="hint">Symptoms, how long, your pet's name and age (10 to 500 characters).</p>
+            <p id="reason-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="preferredContact">Preferred contact</label>
+            <select id="preferredContact" name="preferredContact" aria-describedby="preferredContact-error">
+              <option value="">Choose…</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="phone">Phone call</option>
+              <option value="email">Email</option>
+            </select>
+            <p id="preferredContact-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="contact" id="contact-label">Phone, WhatsApp number or email</label>
+            <input id="contact" name="contact" type="text" autocomplete="tel" aria-describedby="contact-error">
+            <p id="contact-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="preferredDate">Preferred date</label>
+            <input id="preferredDate" name="preferredDate" type="date" aria-describedby="preferredDate-error">
+            <p id="preferredDate-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="preferredTime">Preferred time</label>
+            <select id="preferredTime" name="preferredTime" aria-describedby="preferredTime-error">
+              <option value="">Choose…</option>
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+            <p id="preferredTime-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field field-wide">
+            <label for="photoName">Photo file name <span class="optional">(optional)</span></label>
+            <input id="photoName" name="photoName" type="text" maxlength="100" placeholder="e.g. luna-paw.jpg" aria-describedby="photoName-hint photoName-error">
+            <p id="photoName-hint" class="hint">In this demo only the file name is recorded (.jpg, .png, .heic or .webp).</p>
+            <p id="photoName-error" class="error" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send appointment request</button>
+        <p class="hint">This is a request, not a confirmed booking. The clinic will reply to confirm.</p>
+      </form>
+
+      <div id="confirmation" class="confirmation" hidden tabindex="-1" aria-labelledby="confirmation-title">
+        <h3 id="confirmation-title">Request received, thank you!</h3>
+        <p>Your reference: <strong id="confirmation-id"></strong></p>
+        <dl id="confirmation-summary" class="summary"></dl>
+        <div class="auto-reply">
+          <p class="auto-reply-label" id="confirmation-channel">In the real version this opens WhatsApp with:</p>
+          <blockquote id="confirmation-reply"></blockquote>
+        </div>
+        <button type="button" id="new-request" class="btn btn-secondary">Make another request</button>
+      </div>
+    </section>
+
+    <section id="owner-view" class="wrap card" aria-labelledby="owner-title">
+      <div class="owner-head">
+        <div>
+          <h2 id="owner-title">Owner view: pending requests</h2>
+          <p class="hint">What the clinic team would see. Stored only in this browser for the demo.</p>
+        </div>
+        <p class="pending-count" aria-live="polite"><span id="pending-count">0</span> new</p>
+      </div>
+      <div class="owner-actions">
+        <button type="button" id="export-csv" class="btn btn-primary">Export CSV</button>
+        <button type="button" id="clear-data" class="btn btn-secondary">Clear demo data</button>
+      </div>
+      <p id="owner-message" class="owner-message" role="status"></p>
+      <p id="empty-state" class="empty-state">No requests yet. Submit the form above to see one appear here.</p>
+      <ul id="enquiry-list" class="enquiry-list"></ul>
+    </section>
+
+    <section id="speed-note" class="wrap card note" aria-labelledby="speed-title">
+      <h2 id="speed-title">Note for the owner: a lighter, faster homepage</h2>
+      <p>The current homepage weighs about <strong>7.9 MB</strong>, mostly from slider images that are still the theme's placeholder files (<code>dummy.png</code>). On a phone over mobile data that means several seconds of waiting before anything useful appears. The page also has no <strong>meta description</strong>, so search engines invent their own snippet.</p>
+      <h3>Quick fixes (about a day of work)</h3>
+      <ul>
+        <li>Remove the <code>dummy.png</code> slider images, or replace them with two or three real clinic photos.</li>
+        <li>Resize photos to the size they are shown at and compress them to WebP (typically under 150 KB each).</li>
+        <li>Lazy-load images below the fold so the first screen appears straight away.</li>
+        <li>Add a meta description naming the clinic, Maqabah and the main services.</li>
+        <li>Put this appointment request form back online so routine bookings move off the phone.</li>
+      </ul>
+      <p>Target: a homepage under 1 MB that shows useful content in about a second on 4G.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Concept demo by Omar, not the official Bahrain Veterinary Centre website</strong></p>
+      <p>Bahrain Veterinary Centre, Maqabah (Budaiya Highway), Bahrain. Contact details on this page are sample placeholders. No data leaves this browser.</p>
+    </div>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+<script data-whatsapp-guard>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !/\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)([/?]|$)/i.test(a.href)) return;
+  e.preventDefault(); e.stopPropagation();
+  var text = '';
+  try { text = decodeURIComponent(((a.href.split('text=')[1] || '').split('&')[0]).replace(/\+/g, ' ')); } catch (_) {}
+  alert('Concept demo: in the real version this opens WhatsApp to the business with this message ready to send. Nothing was sent.' + (text ? '\n\n' + text : ''));
+}, true);
+</script>
+</body>
+</html>
