@@ -5,9 +5,13 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  // Sirab is a separate static site (D:/Projects/sirab-expeditions, `npm run build:portfolio`) served from public/sirab.
+  // Sirab and SYNC are separate static sites (D:/Projects/sirab-expeditions and D:/Projects/sync-escape,
+  // `npm run build:portfolio` in each) served from public/sirab and public/sync.
   async rewrites() {
-    return [{ source: "/sirab", destination: "/sirab/index.html" }];
+    return [
+      { source: "/sirab", destination: "/sirab/index.html" },
+      { source: "/sync", destination: "/sync/index.html" },
+    ];
   },
   // Concept demos for prospects (public/demos) are unlisted: keep them out of search.
   async headers() {

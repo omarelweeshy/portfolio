@@ -17,12 +17,15 @@ test.describe("home page", () => {
     expect(errors).toEqual([]);
   });
 
-  test("lists every project with a working source link", async ({ page }) => {
+  test("lists every project with its demo and source links", async ({ page }) => {
     await page.goto("/");
     for (const p of projects) {
       const card = page.locator(`article.project-${p.slug}`);
       await expect(card.getByRole("heading", { name: p.name })).toBeAttached();
-      await expect(card.locator(`a[href="${p.repo}"]`).first()).toBeAttached();
+      // Every card links somewhere; private repos have no source link rather than a dead one.
+      expect(p.repo ?? p.demo).toBeTruthy();
+      if (p.repo) await expect(card.locator(`a[href="${p.repo}"]`).first()).toBeAttached();
+      else await expect(card.getByText("Source ↗")).toHaveCount(0);
       if (p.demo) await expect(card.locator(`a[href="${p.demo}"]`).first()).toBeAttached();
     }
   });
@@ -62,6 +65,14 @@ test("Sirab concept site is served at /sirab", async ({ request }) => {
   const res = await request.get("/sirab");
   expect(res.status()).toBe(200);
   expect(await res.text()).toContain("<title>Sirab");
+});
+
+test("SYNC concept site and its 3D assets are served at /sync", async ({ request }) => {
+  const res = await request.get("/sync");
+  expect(res.status()).toBe(200);
+  expect(await res.text()).toContain("<title>SYNC");
+  const model = await request.get("/sync/assets/models/large_castle_door.glb");
+  expect(model.status()).toBe(200);
 });
 
 test("unknown routes return 404", async ({ request }) => {

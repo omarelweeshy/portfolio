@@ -135,9 +135,11 @@ export default function Work() {
                     <Roll>Live demo ↗</Roll>
                   </a>
                 )}
-                <a href={p.repo} target="_blank" rel="noopener noreferrer">
-                  <Roll>Source ↗</Roll>
-                </a>
+                {p.repo && (
+                  <a href={p.repo} target="_blank" rel="noopener noreferrer">
+                    <Roll>Source ↗</Roll>
+                  </a>
+                )}
               </div>
             </div>
           </article>

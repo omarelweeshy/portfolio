@@ -26,7 +26,8 @@ export type Project = {
   visual: Visual;
   image?: string;
   demo?: string;
-  repo: string;
+  /** Omit for private repos, so the card doesn't link to a 404. */
+  repo?: string;
 };
 
 export const projects: Project[] = [
@@ -85,6 +86,19 @@ export const projects: Project[] = [
     image: "/work/sirab.jpg",
     demo: "https://omarelweeshy.vercel.app/sirab",
     repo: "https://github.com/omarelweeshy/sirab-expeditions",
+  },
+  {
+    slug: "sync",
+    name: "SYNC Escape Rooms",
+    year: "2026",
+    category: "Real-time 3D / WebGL",
+    summary:
+      "A cinematic site for a fictional escape room venue in New Cairo. A three.js chamber built from photoscanned assets reacts to scroll: each room relights the scene, the chest opens, the exit door swings and the frame dissolves into white. On weak GPUs it lowers its render resolution instead of stuttering, and booking hands off to WhatsApp.",
+    stack: ["TypeScript", "three.js", "GLSL", "GSAP", "Vite"],
+    status: "Concept site, fictional venue",
+    visual: "image",
+    image: "/work/sync.jpg",
+    demo: "https://omarelweeshy.vercel.app/sync",
   },
   {
     slug: "forecast",
