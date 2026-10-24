@@ -85,7 +85,6 @@ export const projects: Project[] = [
     visual: "image",
     image: "/work/sirab.jpg",
     demo: "https://omarelweeshy.vercel.app/sirab",
-    repo: "https://github.com/omarelweeshy/sirab-expeditions",
   },
   {
     slug: "sync",
