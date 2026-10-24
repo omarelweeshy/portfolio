@@ -7,8 +7,8 @@
     <meta name="description" content="Immersive escape rooms that rebuild moments from history. A concept site with a real-time 3D scene." />
     <meta name="theme-color" content="#0a0705" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='20' transform='rotate(45 16 16)' fill='none' stroke='%23b51a1f' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='14' r='3' fill='%23b51a1f'/%3E%3Cpath d='M14.6 15.5h2.8l1 5h-4.8z' fill='%23b51a1f'/%3E%3C/svg%3E" />
-    <script type="module" crossorigin src="/sync/assets/index-BJ_BGT0w.js"></script>
-    <link rel="stylesheet" crossorigin href="/sync/assets/index-YfalGQb3.css">
+    <script type="module" crossorigin src="/sync/assets/index-B_b6pe4c.js"></script>
+    <link rel="stylesheet" crossorigin href="/sync/assets/index-9Nv6Zbe1.css">
   </head>
   <body>
     <canvas id="webgl" aria-hidden="true"></canvas>
@@ -22,6 +22,14 @@
         </svg>
         <p class="loader__label"><span>Synchronising memory</span><span class="loader__pct">000</span></p>
         <div class="loader__bar"><span></span></div>
+        <div class="gate" hidden>
+          <button type="button" class="btn btn--red gate__on" data-cursor="Enter">
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            Enter with sound
+          </button>
+          <button type="button" class="btn btn--ghost gate__off">Enter in silence</button>
+          <p class="gate__note mono">Best with headphones · press M to mute</p>
+        </div>
       </div>
       <ol class="loader__log mono" aria-hidden="true">
         <li>&gt; locating memory: cairo, 1249</li>
@@ -29,7 +37,7 @@
         <li>&gt; lighting the lanterns</li>
         <li>&gt; locking the door</li>
       </ol>
-      <p class="loader__note mono">Real-time 3D. Best with sound off and lights low.</p>
+      <p class="loader__note mono">Real-time 3D. Best with headphones and the lights low.</p>
     </div>
 
     <div class="cursor" aria-hidden="true">
@@ -51,7 +59,13 @@
         <a href="#records" data-scroll-to>Records</a>
         <a href="#faq" data-scroll-to>FAQ</a>
       </nav>
-      <a class="btn btn--red btn--sm magnetic nav__cta" href="#book" data-scroll-to>Book a room</a>
+      <div class="nav__right">
+        <button type="button" class="sound-toggle" aria-pressed="false" data-cursor="Sound">
+          <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="sound-toggle__label">Sound off</span>
+        </button>
+        <a class="btn btn--red btn--sm magnetic nav__cta" href="#book" data-scroll-to>Book a room</a>
+      </div>
     </header>
 
     <aside class="hud mono" aria-hidden="true">

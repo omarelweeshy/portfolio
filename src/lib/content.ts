@@ -93,8 +93,8 @@ export const projects: Project[] = [
     year: "2026",
     category: "Real-time 3D / WebGL",
     summary:
-      "A cinematic site for a fictional escape room venue in New Cairo. A three.js chamber built from photoscanned assets reacts to scroll: each room relights the scene, the chest opens, the exit door swings and the frame dissolves into white. On weak GPUs it lowers its render resolution instead of stuttering, and booking hands off to WhatsApp.",
-    stack: ["TypeScript", "three.js", "GLSL", "GSAP", "Vite"],
+      "A cinematic site for a fictional escape room venue in New Cairo. A three.js chamber built from photoscanned assets reacts to scroll: each room relights the scene, the chest opens, the exit door swings and the frame dissolves into white, all scored by sound synthesised live in the browser. On weak GPUs it lowers its render resolution instead of stuttering.",
+    stack: ["TypeScript", "three.js", "GLSL", "Web Audio", "GSAP"],
     status: "Concept site, fictional venue",
     visual: "image",
     image: "/work/sync.jpg",
