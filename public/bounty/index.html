@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>BOUNTY · Build it. Run it.</title>
+    <meta name="description" content="A Most Wanted style 3D car garage and police pursuit in the browser. Spec your car, then outrun the city. A real-time 3D concept." />
+    <meta name="theme-color" content="#0c0d0b" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l3.6 7.4 8.2 1.2-5.9 5.8 1.4 8.1L16 20.7l-7.3 3.8 1.4-8.1-5.9-5.8 8.2-1.2z' fill='%23f2a71b'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="/bounty/assets/index-BzLK2cRr.js"></script>
+    <link rel="stylesheet" crossorigin href="/bounty/assets/index-WRL6k-YC.css">
+  </head>
+  <body>
+    <canvas id="webgl" aria-hidden="true"></canvas>
+
+    <!-- Loader: progress is real (assets + shader compile); the tips are flavour. -->
+    <div class="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <p class="loader__kicker mono">Port Calder · garage 05</p>
+        <h1 class="loader__logo" aria-label="Bounty"><span>BOUNTY</span><span aria-hidden="true">BOUNTY</span></h1>
+        <div class="loader__bar"><span></span></div>
+        <p class="loader__row mono"><span class="loader__tip">Loading the garage</span><span class="loader__pct">000</span></p>
+        <div class="gate" hidden>
+          <button type="button" class="btn btn--amber gate__on"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Start with sound</button>
+          <button type="button" class="btn btn--ghost gate__off">Start muted</button>
+          <p class="gate__note mono">Engine, sirens and radio are generated live · M to mute</p>
+        </div>
+      </div>
+      <p class="loader__note mono">Real-time 3D. A concept, not affiliated with any game studio.</p>
+    </div>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top" data-scroll-to aria-label="Bounty, back to top">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 7.4 8.2 1.2-5.9 5.8 1.4 8.1L16 20.7l-7.3 3.8 1.4-8.1-5.9-5.8 8.2-1.2z" /></svg>
+        <span>BOUNTY</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#build" data-scroll-to>Build</a>
+        <a href="#run" data-scroll-to>Run</a>
+        <a href="#shops" data-scroll-to>For shops</a>
+      </nav>
+      <div class="nav__right">
+        <button type="button" class="sound-toggle" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="sound-toggle__label">Sound off</span></button>
+        <button type="button" class="btn btn--amber btn--sm" data-go="garage">Enter garage</button>
+      </div>
+    </header>
+
+    <main class="landing" id="top">
+      <section class="hero" data-shot="hero">
+        <div class="hero__copy">
+          <p class="kicker mono"><span class="dot"></span>Most Wanted garage · Port Calder</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Build it.</span></span>
+            <span class="line line--amber"><span>Run it.</span></span>
+          </h1>
+          <p class="hero__sub">Spec a car down to the brake calipers, then take it into a city that wants it off the road. Everything you see is real-time 3D, running in your browser.</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--amber" data-go="garage">Enter the garage</button>
+            <button type="button" class="btn btn--ghost" data-go="drive">Straight to the streets</button>
+          </div>
+        </div>
+        <div class="hero__hud mono" aria-hidden="true">
+          <div><span>Heat</span><b class="mini-heat"><i></i><i></i><i></i><i></i><i></i></b></div>
+          <div><span>Bounty</span><b class="hero__bounty">0</b></div>
+          <div><span>Plate</span><b class="hero__plate">BNTY 05</b></div>
+        </div>
+        <p class="scroll-cue mono" aria-hidden="true">Scroll<span></span></p>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track"><span>Build · Run · Evade · Most wanted · Build · Run · Evade · Most wanted · </span><span>Build · Run · Evade · Most wanted · Build · Run · Evade · Most wanted · </span></div>
+      </div>
+
+      <section class="chapter" id="build" data-shot="paint" data-demo="paint">
+        <div class="chapter__copy">
+          <p class="chapter__num mono">01 / Paint</p>
+          <h2 class="split">Paint that moves like paint.</h2>
+          <p>Gloss, metallic, pearl, matte, chrome. Each finish is a physically based clear coat over a base layer, so highlights roll across the body the way they do under a showroom rig. Change colour and it wipes on, front to back.</p>
+          <p class="chapter__data mono"><span class="demo-paint">Arctic silver</span> · <span class="demo-finish">Metallic</span></p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--right" data-shot="wheel" data-demo="rims">
+        <div class="chapter__copy">
+          <p class="chapter__num mono">02 / Wheels</p>
+          <h2 class="split">Six wheels. Zero downloads.</h2>
+          <p>Every rim is generated in code: spoke count, dish depth, concave face, polished lip. Swap them and the calipers stay put while the wheel turns, like the real thing.</p>
+          <p class="chapter__data mono"><span class="demo-rim">Five-spoke</span></p>
+        </div>
+      </section>
+
+      <section class="chapter" data-shot="side" data-demo="stance">
+        <div class="chapter__copy">
+          <p class="chapter__num mono">03 / Stance &amp; livery</p>
+          <h2 class="split">Lower. Wider. Louder.</h2>
+          <p>Ride height, negative camber, window tint, plate text and vinyls projected onto the body as you pick them. Then it all goes onto a wanted poster you can share.</p>
+          <p class="chapter__data mono">Ride height <span class="demo-height">-20</span> mm · camber <span class="demo-camber">2.0</span>°</p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--right chapter--run" id="run" data-shot="front" data-demo="run">
+        <div class="chapter__copy">
+          <p class="chapter__num mono">04 / Run</p>
+          <h2 class="split">Heat level five.</h2>
+          <p>Take the build into Port Calder. Trip a speed trap, stack up bounty, drop a pursuit breaker on the units behind you, then stay out of sight until the cooldown runs out.</p>
+          <div class="run-meter mono" aria-hidden="true">
+            <span>Heat</span>
+            <b class="run-heat"><i></i><i></i><i></i><i></i><i></i></b>
+            <span class="run-bounty">0</span>
+          </div>
+          <button type="button" class="btn btn--amber" data-go="drive">Start a pursuit</button>
+        </div>
+      </section>
+
+      <section class="numbers" data-shot="top">
+        <div class="numbers__grid">
+          <div><b data-count="6">0</b><span>rim designs, all procedural</span></div>
+          <div><b data-count="5">0</b><span>paint finishes</span></div>
+          <div><b data-count="36">0</b><span>city blocks to lose them in</span></div>
+          <div><b data-count="5">0</b><span>heat levels</span></div>
+        </div>
+      </section>
+
+      <section class="shops" id="shops" data-shot="top" data-hud="off">
+        <div class="shops__head">
+          <p class="chapter__num mono">05 / For shops</p>
+          <h2 class="split">Built for the counter, not just the screen.</h2>
+        </div>
+        <div class="shops__cards">
+          <article class="card">
+            <p class="mono">Rim &amp; wrap shops</p>
+            <h3>Show it before the wrench comes out.</h3>
+            <p>Put the exact wheel, finish and wrap on the customer's car on a tablet at the counter.</p>
+          </article>
+          <article class="card">
+            <p class="mono">Used-car showrooms</p>
+            <h3>Spec, share, test drive.</h3>
+            <p>Buyers configure from their phone, send the build to a friend, and take it for a spin in the city.</p>
+          </article>
+          <article class="card">
+            <p class="mono">Meets &amp; launches</p>
+            <h3>A poster for every build.</h3>
+            <p>Every car that rolls in gets its own wanted poster with plate, stats and bounty, ready to post.</p>
+          </article>
+        </div>
+        <p class="shops__note"><b>Honest status:</b> this is a concept. The garage, the poster and the pursuit are real and run in your browser. A shop uploading its own 3D models, stock list and lead capture are planned, not built.</p>
+        <div class="shops__cta"><button type="button" class="btn btn--amber" data-go="garage">Build yours</button></div>
+      </section>
+
+      <footer class="footer" data-shot="top" data-hud="off">
+        <div class="footer__mark" aria-hidden="true">BOUNTY</div>
+        <div class="footer__cols">
+          <p>Car model: “Car Concept” by Eric Chadwick / Darmstadt Graphics Group, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, from the <a href="https://github.com/KhronosGroup/glTF-Sample-Assets" target="_blank" rel="noopener">Khronos glTF Sample Assets</a>, with the Khronos logos removed and rebuilt paint, wheels and glass.</p>
+          <p>Textures: <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a> (CC0). Sound: synthesised live. Concept, design and build: <a href="https://omarelweeshy.vercel.app" target="_blank" rel="noopener">Omar Ashraf</a></p>
+        </div>
+        <p class="footer__fine">BOUNTY and Port Calder are fictional, made as a design concept. Not affiliated with Electronic Arts, Need for Speed or any car maker.</p>
+      </footer>
+    </main>
+
+    <!-- Garage -->
+    <section class="garage" aria-label="Garage" hidden>
+      <div class="garage__top">
+        <button type="button" class="icon-btn" data-go="landing" aria-label="Back to the site">←</button>
+        <div class="garage__name">
+          <label class="mono" for="build-name">Build</label>
+          <input id="build-name" maxlength="22" spellcheck="false" autocomplete="off" />
+        </div>
+        <div class="garage__tools">
+          <button type="button" class="chip" data-action="random">Randomise</button>
+          <button type="button" class="chip" data-action="share">Copy link</button>
+          <button type="button" class="chip" data-action="reset">Reset</button>
+        </div>
+      </div>
+      <nav class="tabs" aria-label="Categories">
+        <button type="button" class="tab is-on" data-tab="paint"><span class="mono">01</span>Paint</button>
+        <button type="button" class="tab" data-tab="wheels"><span class="mono">02</span>Wheels</button>
+        <button type="button" class="tab" data-tab="body"><span class="mono">03</span>Body</button>
+        <button type="button" class="tab" data-tab="vinyl"><span class="mono">04</span>Vinyl</button>
+        <button type="button" class="tab" data-tab="plate"><span class="mono">05</span>Plate</button>
+        <button type="button" class="tab" data-tab="perf"><span class="mono">06</span>Performance</button>
+      </nav>
+      <div class="panel" role="region" aria-live="polite"></div>
+      <aside class="stats">
+        <p class="mono stats__title">Game stats</p>
+        <div class="stat" data-stat="speed"><span>Top speed</span><i><b></b></i><em></em></div>
+        <div class="stat" data-stat="accel"><span>Acceleration</span><i><b></b></i><em></em></div>
+        <div class="stat" data-stat="handling"><span>Handling</span><i><b></b></i><em></em></div>
+        <div class="stat" data-stat="nitro"><span>Nitrous</span><i><b></b></i><em></em></div>
+      </aside>
+      <div class="garage__bottom">
+        <p class="garage__hint mono">Drag to orbit · scroll or pinch to zoom</p>
+        <button type="button" class="btn btn--ghost" data-action="poster">Wanted poster</button>
+        <button type="button" class="btn btn--amber" data-go="drive">Test drive</button>
+      </div>
+      <p class="toast mono" role="status"></p>
+    </section>
+
+    <!-- Poster -->
+    <div class="poster" role="dialog" aria-modal="true" aria-label="Wanted poster" hidden>
+      <div class="poster__inner">
+        <canvas class="poster__canvas"></canvas>
+        <div class="poster__actions">
+          <p class="mono">Your wanted poster, 1080 × 1350</p>
+          <button type="button" class="btn btn--amber" data-action="download">Download PNG</button>
+          <button type="button" class="btn btn--ghost" data-action="native-share" hidden>Share</button>
+          <button type="button" class="btn btn--ghost" data-action="close-poster">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Street HUD -->
+    <section class="drive" data-phase="free" aria-label="Pursuit" hidden>
+      <div class="drive__tl">
+        <div class="heat">
+          <span class="mono">Heat</span>
+          <div class="heat__bars"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="heat__next"><i class="heat__fill"></i></div>
+        </div>
+        <div class="bounty"><span class="mono">Bounty</span><b class="bounty__value">0</b></div>
+        <dl class="pstats mono">
+          <div><dt>Units</dt><dd data-stat="cops">0</dd></div>
+          <div><dt>Wrecked</dt><dd data-stat="wrecked">0</dd></div>
+          <div><dt>Time</dt><dd data-stat="time">0:00</dd></div>
+        </dl>
+      </div>
+      <canvas class="minimap" aria-hidden="true"></canvas>
+      <div class="feed" aria-live="polite"></div>
+      <div class="pbar">
+        <div class="pbar__evade"><i></i></div>
+        <span class="pbar__label mono">Free roam</span>
+        <div class="pbar__bust"><i></i></div>
+      </div>
+      <div class="speedo">
+        <svg viewBox="0 0 200 120" aria-hidden="true">
+          <path class="speedo__track" d="M20 110 A80 80 0 0 1 180 110" />
+          <path class="speedo__arc" d="M20 110 A80 80 0 0 1 180 110" />
+        </svg>
+        <span class="speedo__kmh">000</span>
+        <span class="speedo__unit mono">km/h</span>
+        <span class="speedo__gear mono">1</span>
+        <div class="nitro"><i></i></div>
+      </div>
+      <div class="radio"><span class="radio__who mono"></span><p class="radio__line"></p></div>
+      <div class="banner"><span class="banner__text"></span></div>
+      <p class="hint"></p>
+      <div class="touch" aria-hidden="true">
+        <div class="touch__steer"><button type="button" data-touch="left">◀</button><button type="button" data-touch="right">▶</button></div>
+        <div class="touch__pedals">
+          <button type="button" data-touch="nitro">N2O</button>
+          <button type="button" data-touch="hand">E-BRAKE</button>
+          <button type="button" data-touch="brake">BRAKE</button>
+          <button type="button" data-touch="gas">GAS</button>
+        </div>
+      </div>
+      <button type="button" class="icon-btn drive__pause" data-action="pause" aria-label="Pause">II</button>
+      <div class="pause" hidden>
+        <p class="pause__title">Paused</p>
+        <button type="button" class="btn btn--amber" data-action="resume">Resume</button>
+        <button type="button" class="btn btn--ghost" data-action="restart">Restart run</button>
+        <button type="button" class="btn btn--ghost" data-go="garage">Back to garage</button>
+        <p class="mono pause__keys">W/S or arrows drive · A/D steer · Space handbrake · Shift nitro · C camera · R reset · Esc pause · gamepad works too</p>
+      </div>
+      <div class="endcard" hidden>
+        <p class="endcard__kicker mono"></p>
+        <h2 class="endcard__title"></h2>
+        <p class="endcard__bounty"><span class="mono">Bounty</span><b></b></p>
+        <dl class="endcard__stats mono"></dl>
+        <ul class="endcard__list mono"></ul>
+        <div class="endcard__actions">
+          <button type="button" class="btn btn--amber" data-action="restart">Run it again</button>
+          <button type="button" class="btn btn--ghost" data-action="poster">Wanted poster</button>
+          <button type="button" class="btn btn--ghost" data-go="garage">Garage</button>
+        </div>
+      </div>
+      <div class="streets-loading mono" hidden>Building Port Calder…</div>
+    </section>
+
+  </body>
+</html>

@@ -75,6 +75,14 @@ test("SYNC concept site and its 3D assets are served at /sync", async ({ request
   expect(model.status()).toBe(200);
 });
 
+test("BOUNTY concept site and its car model are served at /bounty", async ({ request }) => {
+  const res = await request.get("/bounty");
+  expect(res.status()).toBe(200);
+  expect(await res.text()).toContain("<title>BOUNTY");
+  const model = await request.get("/bounty/assets/car.glb");
+  expect(model.status()).toBe(200);
+});
+
 test("unknown routes return 404", async ({ request }) => {
   const res = await request.get("/this-page-does-not-exist");
   expect(res.status()).toBe(404);

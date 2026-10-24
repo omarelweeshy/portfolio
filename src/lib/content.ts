@@ -100,6 +100,19 @@ export const projects: Project[] = [
     demo: "https://omarelweeshy.vercel.app/sync",
   },
   {
+    slug: "bounty",
+    name: "BOUNTY",
+    year: "2026",
+    category: "Real-time 3D / Browser game",
+    summary:
+      "A Most Wanted style car configurator and police chase in the browser. Spec paint, procedurally generated rims, stance and vinyls on a 3D car, print it as a wanted poster, then outrun police AI through a procedural city with heat levels, pursuit breakers and sound synthesised live. Pitched at rim and wrap shops; shop uploads and lead capture are not built yet.",
+    stack: ["TypeScript", "three.js", "GLSL", "Web Audio", "GSAP"],
+    status: "Concept, playable in the browser",
+    visual: "image",
+    image: "/work/bounty.jpg",
+    demo: "https://omarelweeshy.vercel.app/bounty",
+  },
+  {
     slug: "forecast",
     name: "Donation Forecast",
     year: "2026",
