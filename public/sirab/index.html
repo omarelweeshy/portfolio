@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Reem+Kufi:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/sirab/assets/index-Bhbh_P3f.js"></script>
-    <link rel="stylesheet" crossorigin href="/sirab/assets/index-BVx8ZoaJ.css">
+    <script type="module" crossorigin src="/sirab/assets/index-BRFbTDqg.js"></script>
+    <link rel="stylesheet" crossorigin href="/sirab/assets/index-DQVQLM70.css">
   </head>
   <body class="is-loading">
     <div class="grain" aria-hidden="true"></div>
@@ -79,17 +79,27 @@
           </h1>
           <p class="hero__sub">Private expeditions into the emptiest quarter of the Sahara.</p>
         </div>
-        <div class="hero__meta" aria-hidden="true">
-          <div class="readout">
-            <span class="readout__k">Position</span>
-            <span class="readout__v" data-coords>26°30'N 25°30'E</span>
+        <div class="hero__meta">
+          <div class="hero__readouts" aria-hidden="true">
+            <div class="readout">
+              <span class="readout__k">Position</span>
+              <span class="readout__v" data-coords>26°30'N 25°30'E</span>
+            </div>
+            <div class="readout">
+              <span class="readout__k">Wind</span>
+              <span class="readout__v" data-wind>14 km/h NW</span>
+            </div>
           </div>
-          <div class="readout">
-            <span class="readout__k">Wind</span>
-            <span class="readout__v" data-wind>14 km/h NW</span>
+          <div class="thumper">
+            <button type="button" class="thumper__btn" data-cursor="Plant">
+              <span class="thumper__icon" aria-hidden="true"><i></i></span>
+              <span class="thumper__label">Plant a thumper</span>
+            </button>
+            <span class="thumper__sub" aria-hidden="true">or click the sand</span>
           </div>
-          <div class="hero__cue"><span>Scroll to descend</span><i></i></div>
+          <div class="hero__cue" aria-hidden="true"><span>Scroll to descend</span><i></i></div>
         </div>
+        <p class="sr-only" aria-live="polite" data-thumper-status></p>
       </section>
 
       <!-- MANIFESTO -->
