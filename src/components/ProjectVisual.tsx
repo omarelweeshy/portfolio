@@ -69,6 +69,42 @@ function Vision() {
   );
 }
 
+// The message is invented; the extracted rows are egy-ioc's real output for it.
+function Indicators() {
+  return (
+    <div className="art art-indicators">
+      <div className="art-msg">
+        <span className="art-kicker">Sample message</span>
+        <p dir="rtl" lang="ar">
+          تم إيقاف حسابك على إنستاباي. ادفع <mark>٦ جنيه</mark> على فودافون كاش <mark>٠١٠٠ ٠٠٠ ٠٠٠١</mark> وادخل{" "}
+          <mark dir="ltr">hxxps://instapay-verify[.]test</mark> و<mark>ابعتلي الكود</mark>
+        </p>
+      </div>
+      <div className="art-iocs">
+        <span className="art-kicker">egy-ioc extract</span>
+        <dl>
+          <div>
+            <dt>wallet</dt>
+            <dd>+201000000001 · vodafone_cash</dd>
+          </div>
+          <div>
+            <dt>url</dt>
+            <dd>lookalike: instapay</dd>
+          </div>
+          <div>
+            <dt>amount</dt>
+            <dd>6 EGP</dd>
+          </div>
+          <div>
+            <dt>signal</dt>
+            <dd>otp_request</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectVisual({ project }: { project: Project }) {
   if (project.visual === "image" && project.image)
     return (
@@ -82,5 +118,6 @@ export default function ProjectVisual({ project }: { project: Project }) {
     );
   if (project.visual === "documents") return <Documents />;
   if (project.visual === "forecast") return <Forecast />;
+  if (project.visual === "indicators") return <Indicators />;
   return <Vision />;
 }

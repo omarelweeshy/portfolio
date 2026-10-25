@@ -977,6 +977,100 @@ a:focus-visible .roll::after {
   line-height: 0.9;
   color: var(--accent);
 }
+/* Sized in container units. Frames are 16:10 when stacked (~380x238 on phones) and wide and
+   short in the desktop scroller, so the layout switches on aspect ratio. The bottom fifth stays
+   clear for the status pill and the Illustration tag; side margins allow for the parallax zoom. */
+.art-indicators {
+  background: #101113;
+  color: #edebe4;
+  container-type: size;
+  --msg-font: clamp(9px, 2.4cqw, 24px);
+  --ioc-font: clamp(7px, 1.45cqw, 14px);
+}
+.art-indicators .art-kicker {
+  font-size: calc(var(--ioc-font) * 0.9);
+}
+.art-msg {
+  position: absolute;
+  left: 8%;
+  top: 7%;
+  width: 70%;
+  padding: 0.9em 1.2em;
+  font-size: var(--msg-font);
+  background: #1d2024;
+  border-radius: 14px 14px 14px 4px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  transform: rotate(-1.5deg);
+}
+.art-msg .art-kicker {
+  color: rgba(237, 235, 228, 0.65);
+}
+.art-msg p {
+  margin: 0.4em 0 0;
+  line-height: 1.75;
+}
+.art-msg mark {
+  color: inherit;
+  white-space: nowrap;
+  background: rgba(255, 91, 46, 0.18);
+  border-bottom: 2px solid var(--accent);
+  border-radius: 2px;
+  padding: 0 0.15em;
+}
+.art-iocs {
+  position: absolute;
+  right: 8%;
+  bottom: 21%;
+  width: 54%;
+  padding: 1em 1.2em;
+  font-size: var(--ioc-font);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  font-family: var(--mono);
+}
+.art-iocs dl {
+  display: grid;
+  gap: 0.55em;
+  margin: 0.8em 0 0;
+}
+.art-iocs dl div {
+  display: grid;
+  grid-template-columns: 7.5ch 1fr;
+  gap: 1ch;
+  align-items: baseline;
+}
+.art-iocs dt {
+  justify-self: start;
+  padding: 0 0.5ch;
+  background: var(--accent);
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+.art-iocs dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+@container (aspect-ratio > 1.9) {
+  /* A container query can't restyle the container itself, so the sizes are set on its children. */
+  .art-msg,
+  .art-iocs {
+    --msg-font: clamp(9px, 5.4cqh, 22px);
+    --ioc-font: clamp(7px, 3.9cqh, 14px);
+  }
+  .art-msg {
+    left: 9%;
+    top: 12%;
+    width: 44%;
+  }
+  .art-iocs {
+    right: 9%;
+    top: 12%;
+    bottom: auto;
+    width: 34%;
+  }
+}
 
 /* ─── Marquee ────────────────────────────────────────────────────────── */
 .marquee {

@@ -13,7 +13,7 @@ export const profile = {
 export const statement =
   "I build AI systems that do real work: automations with a human in control, forecasts people act on, and document tools that show their sources. Useful first, impressive second.";
 
-export type Visual = "image" | "documents" | "forecast" | "vision";
+export type Visual = "image" | "documents" | "forecast" | "vision" | "indicators";
 
 export type Project = {
   slug: string;
@@ -72,6 +72,18 @@ export const projects: Project[] = [
     image: "/work/docintel.jpg",
     demo: "https://docintel-ai-psi.vercel.app",
     repo: "https://github.com/omarelweeshy/docintel-ai",
+  },
+  {
+    slug: "egy-ioc",
+    name: "egy-ioc",
+    year: "2026",
+    category: "Threat intelligence / Arabic NLP",
+    summary:
+      "Finds scam indicators in Egyptian Arabic, Franco-Arab and English messages: mobile numbers written in Arabic digits, the wallet they point to, InstaPay handles, lookalike bank and government domains, and requests for your OTP code. Every finding cites the exact characters it came from. Tested on invented messages; not yet measured on real ones.",
+    stack: ["Python", "Regex", "Unicode / IDNA", "pyright", "pytest"],
+    status: "Open source, invented test data",
+    visual: "indicators",
+    repo: "https://github.com/omarelweeshy/egy-ioc",
   },
   {
     slug: "sirab",
