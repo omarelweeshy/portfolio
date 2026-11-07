@@ -15,11 +15,20 @@ const nextConfig: NextConfig = {
     ];
   },
   // Concept demos for prospects (public/demos) are unlisted: keep them out of search.
+  // Sirab is sent to prospects, so no other site may embed it in a frame and pass it off as its own
+  // (`:path*` also matches /sirab itself).
   async headers() {
     return [
       {
         source: "/demos/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/sirab/:path*",
+        headers: [
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+        ],
       },
     ];
   },
