@@ -75,6 +75,22 @@ test("SYNC concept site and its 3D assets are served at /sync", async ({ request
   expect(model.status()).toBe(200);
 });
 
+test("per-prospect links serve the demo without shadowing its files", async ({ request }) => {
+  for (const [path, title] of [
+    ["/sirab/some-prospect", "<title>Sirab"],
+    ["/sync/some-prospect", "<title>SYNC"],
+  ]) {
+    const res = await request.get(path);
+    expect(res.status(), path).toBe(200);
+    expect(await res.text()).toContain(title);
+  }
+  // A real file one level down is still the file, not the page.
+  const icon = await request.get("/sirab/favicon.svg");
+  expect(icon.headers()["content-type"]).toContain("image/svg");
+  const sirab = await request.get("/sirab/some-prospect");
+  expect(sirab.headers()["content-security-policy"]).toBe("frame-ancestors 'self'");
+});
+
 test("BOUNTY concept site and its car model are served at /bounty", async ({ request }) => {
   const res = await request.get("/bounty");
   expect(res.status()).toBe(200);

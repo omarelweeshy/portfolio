@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Inter_Tight, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -37,6 +38,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <style>{`.preloader{display:none!important}.js-hide{visibility:visible!important}`}</style>
         </noscript>
         {children}
+        {/* Visit counts (Vercel Web Analytics, no cookies). Only on Vercel, where /_vercel/insights exists;
+            locally and in CI the script would 404. */}
+        {process.env.VERCEL ? <Analytics /> : null}
       </body>
     </html>
   );

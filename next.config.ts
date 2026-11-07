@@ -7,10 +7,14 @@ const nextConfig: NextConfig = {
   },
   // Sirab, SYNC and BOUNTY are separate static sites (D:/Projects/sirab-expeditions, sync-escape and
   // bounty-garage, `npm run build:portfolio` in each) served from public/sirab, public/sync and public/bounty.
+  // /sirab/<name> and /sync/<name> are per-prospect links to the same page, so Web Analytics shows which
+  // prospect's link was opened. Real files under public/ are served first, so these never shadow assets.
   async rewrites() {
     return [
       { source: "/sirab", destination: "/sirab/index.html" },
+      { source: "/sirab/:ref", destination: "/sirab/index.html" },
       { source: "/sync", destination: "/sync/index.html" },
+      { source: "/sync/:ref", destination: "/sync/index.html" },
       { source: "/bounty", destination: "/bounty/index.html" },
     ];
   },
