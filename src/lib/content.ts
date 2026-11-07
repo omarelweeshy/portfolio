@@ -171,6 +171,11 @@ export const services = [
     body: "Decision-ready dashboards and small internal tools that turn model output into actions for non-technical teams.",
     tools: "Power BI / Next.js / Streamlit",
   },
+  {
+    title: "Animated websites",
+    body: "Cinematic, scroll-driven sites with WebGL scenes, 3D, motion and sound that people remember, built to load fast and work on phones.",
+    tools: "WebGL / three.js / GSAP / Web Audio",
+  },
 ];
 
 export const experience = [
@@ -180,25 +185,11 @@ export const experience = [
     period: "2026 – Now",
     note: "Predictive donation forecasting, ML pipelines, Power Automate workflows and executive BI dashboards.",
   },
-  {
-    company: "Hassan Allam Holding",
-    role: "Full Stack Developer Intern",
-    period: "2025",
-    note: "ASP.NET Core MVC applications with clean architecture and SQL query optimisation.",
-  },
-  {
-    company: "Universities of Canada in Egypt",
-    role: "Applications & Web Developer Intern",
-    period: "2024",
-    note: "Responsive React applications, design to component, integrated with backend APIs.",
-  },
-  {
-    company: "Code Samurai",
-    role: "Machine Learning Intern",
-    period: "2024",
-    note: "Supervised models end to end: preprocessing, feature engineering and evaluation.",
-  },
 ];
+
+// One quiet line instead of three intern cards: the current role and the projects carry the page.
+export const earlierExperience =
+  "Earlier: full-stack, web and machine learning internships at Hassan Allam Holding, Universities of Canada in Egypt and Code Samurai (2024 to 2025).";
 
 export const marquee = [
   "AI automation",
@@ -206,5 +197,6 @@ export const marquee = [
   "Document intelligence",
   "Human in the loop",
   "Dashboards",
+  "Animated websites",
   "Threat intelligence",
 ];

@@ -1,4 +1,4 @@
-import { experience, profile } from "@/lib/content";
+import { earlierExperience, experience, profile } from "@/lib/content";
 import Magnetic from "./Magnetic";
 
 export default function About() {
@@ -30,16 +30,21 @@ export default function About() {
 
       <div className="experience">
         <span className="label">(Experience)</span>
-        <ul>
-          {experience.map((e) => (
-            <li key={e.company} data-reveal>
-              <span className="exp-period">{e.period}</span>
-              <h3>{e.company}</h3>
-              <span className="exp-role">{e.role}</span>
-              <p>{e.note}</p>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <ul>
+            {experience.map((e) => (
+              <li key={e.company} data-reveal>
+                <span className="exp-period">{e.period}</span>
+                <h3>{e.company}</h3>
+                <span className="exp-role">{e.role}</span>
+                <p>{e.note}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="exp-earlier" data-reveal>
+            {earlierExperience}
+          </p>
+        </div>
       </div>
     </section>
   );

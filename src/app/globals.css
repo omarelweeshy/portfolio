@@ -1317,6 +1317,11 @@ a:focus-visible .roll::after {
   color: var(--muted);
   font-size: 15px;
 }
+.exp-earlier {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 15px;
+}
 
 /* ─── Contact (revealed from under the page) ─────────────────────────── */
 .contact-clip {

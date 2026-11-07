@@ -36,8 +36,8 @@ export default function Services() {
           What I can <em>build</em> for you
         </h2>
         <p data-reveal>
-          For teams that are drowning in manual work or sitting on data they never use. I will tell you honestly whether
-          AI is the right fix before we start.
+          For teams that are drowning in manual work, sitting on data they never use, or need a website people remember.
+          I will tell you honestly whether AI is the right fix before we start.
         </p>
       </div>
       <ol className="services-list">
